@@ -1,4 +1,4 @@
-# SafeTrack
+# AskAway
 
 ## Project setup
 
