@@ -112,7 +112,7 @@ input[type=text] {
   margin: 5px;
 }
 .close-image {
-  background-color: #white;
+  background-color: white;
   border-color: #F5F5F5;
 }
 .close-image img {
