@@ -34,8 +34,18 @@
 
       <div class="button-area">
         <button class="close-image"><img src="@/assets/add.png"></button>
+
         <div class="divider"></div>
-        <button class="close-image"><img src="@/assets/folder.png"></button>
+
+        <div class="dropdown">
+          <button class="close-image" @click="dropdownList()"><img src="@/assets/folder.png"></button>
+
+          <div id="dropdown" class="dropdown-content">
+            <a href="#home">Sports</a>
+            <a href="#about">Politics</a>
+            <a href="#contact">Create new...</a>
+          </div>
+        </div>
       </div>
       
     </div>  
@@ -54,9 +64,13 @@ export default {
       } else {
         x.style.display = "none";
       }
+    },
+    dropdownList() {
+      document.getElementById("dropdown").classList.toggle("show");
     }
   }
 }
+
 </script>
 
 <style scoped>
@@ -112,5 +126,32 @@ input[type=text] {
     height:auto;
     display:inline-block;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
 </style>
 
