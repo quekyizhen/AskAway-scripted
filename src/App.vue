@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <div id="header">
-      <h1><router-link to="/" exact>Ask Away!</router-link></h1>
-
+      <h1><router-link to="/" exact><img src="@/assets/logo_name.png" width="245" height="53" alt="logo words"></router-link></h1>
       <div v-if="signedIn" class="link"><router-link to="/profile" exact>My Profile</router-link></div>
       <div v-else><div class="link"><router-link to="/login" exact>Login/Register</router-link></div></div>
       <div class="link"><router-link to="/topics" exact>Topics</router-link></div>
@@ -14,7 +13,7 @@
       <router-view @toggleSignIn="toggleSignIn" @toggleSignOut="toggleSignOut" :signedIn="signedIn"></router-view>
     </div>
 
-    <div id="copyright">&#169; BT3103 Octopus 2020</div>
+    <div id="copyright">&#169; Team A <sup>2</sup></div>
   </div>
 </template>
 
@@ -80,7 +79,6 @@ h1 {
   top:20%;
   max-width:500px;
 }
-
 #header {
   width:100%;
   height:100px;
@@ -88,7 +86,7 @@ h1 {
   background: #20344a;
   text-transform:uppercase;
   font-size:15px;
-  overflow: auto;
+  overflow:hidden;
   position: sticky;
   top:0;
   z-index:999;
@@ -96,11 +94,9 @@ h1 {
 
 #header h1 {
   display:inline-block;
-  margin:0;
-  font-weight: bold;
+  margin-top:12px;
   line-height:100px;
-  padding: 0 20px;
-  color:white;
+  padding: 0 5px;
   float:left;
 }
 

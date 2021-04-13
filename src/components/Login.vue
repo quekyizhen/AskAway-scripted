@@ -1,26 +1,28 @@
 <template>
 <div id="login">
-  <h1>Sign In</h1>
+  <div id="logo"><img src="@/assets/logo3.png" width="300" height="100" alt="logo"></div>
+  <!-- <h1>Sign In</h1> -->
   <form novalidate @submit.prevent="login">
-  <label for="email">Email:</label>
+
+  <label for="email">Email:</label><br>
   <input type="text" v-model="email" value="email" id="email"><br>
-  <label for="password">Password:</label>
-  <input type="password" v-model="password" value="password" id="password">
-    <router-link to="/forgot">Forgot Password?</router-link><br>
-  <button type="submit">Sign In</button>
+  <label for="password">Password:</label><br>
+  <input type="password" v-model="password" value="password" id="password"><br>
+    <div id = "forgot"><router-link to="/forgot">Forgot Password?</router-link><br></div>
+    <button type="submit">Log In</button>
     <ul v-if="errors.length">
       <li v-for="error in errors" :key="error">
         {{error}}
       </li>
     </ul>
   </form>
-  <hr><h3>
+  <hr style="width:50%;text-align:left;margin-left:0"><h3>
   New to AskAway?</h3><a><router-link to="/register">Register Here</router-link></a>
 </div>
 </template>
 
 <script>
-// import firebase from 'firebase'
+import firebase from 'firebase'
 export default {
   name: "Login",
   data() {
@@ -36,17 +38,17 @@ export default {
       this.$emit('toggleSignIn', user)
     },
     login() {
-      // this.errors=[]
-      // firebase
-      //     .auth()
-      //     .signInWithEmailAndPassword(this.email, this.password)
-      //     .then(data => {
-      //       this.toggleSignIn(data.user.displayName)
-      //       this.$router.push('/')
-      //     })
-      //     .catch((error) => {
-      //       this.errors.push(error.message)
-      //     });
+      this.errors=[]
+      firebase
+          .auth()
+          .signInWithEmailAndPassword(this.email, this.password)
+          .then(data => {
+            this.toggleSignIn(data.user.displayName)
+            this.$router.push('/')
+          })
+          .catch((error) => {
+            this.errors.push(error.message)
+          });
 
     },
   }
@@ -56,15 +58,16 @@ export default {
 <style scoped>
 #login {
   padding-top:30px;
-  padding-left: 80px;
+  padding-left: 450px;
   padding-bottom: 50px;
 }
 input {
   padding:10px;
-  margin:20px;
+  margin:15px;
+  width:50%;
 }
 label {
-  padding:5px;
+  padding:15px;
 }
 button {
   background-color: rgb(32,52,79);
@@ -75,7 +78,8 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
-  margin: 8px 4px;
+  font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
+  margin:15px 15px;
   cursor: pointer;
   border-radius: 8px;
 }
@@ -91,8 +95,23 @@ a:hover {
   transition:0.5s;
 }
 
+h1{
+   margin-left:15px;
+}
+
 h3 {
   display: inline-block;
-   margin-right:7px;
+  margin-top: 5px;
+  margin-right:10px;
+}
+
+#forgot {
+  margin-left:15px;
+}
+
+#logo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left:80px;
 }
 </style>
