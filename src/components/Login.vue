@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import firebase from 'firebase'
+// import firebase from 'firebase'
 export default {
   name: "Login",
   data() {
@@ -36,17 +36,17 @@ export default {
       this.$emit('toggleSignIn', user)
     },
     login() {
-      this.errors=[]
-      firebase
-          .auth()
-          .signInWithEmailAndPassword(this.email, this.password)
-          .then(data => {
-            this.toggleSignIn(data.user.displayName)
-            this.$router.push('/')
-          })
-          .catch((error) => {
-            this.errors.push(error.message)
-          });
+      // this.errors=[]
+      // firebase
+      //     .auth()
+      //     .signInWithEmailAndPassword(this.email, this.password)
+      //     .then(data => {
+      //       this.toggleSignIn(data.user.displayName)
+      //       this.$router.push('/')
+      //     })
+      //     .catch((error) => {
+      //       this.errors.push(error.message)
+      //     });
 
     },
   }
