@@ -8,7 +8,7 @@
       <div class="link"><router-link to="/general" exact>General</router-link></div>
 
     </div>
-
+  
     <div style="width:100%">
       <router-view @toggleSignIn="toggleSignIn" @toggleSignOut="toggleSignOut" :signedIn="signedIn"></router-view>
     </div>
@@ -125,6 +125,7 @@ h1 {
   font-size:15px;
   line-height:10px;
   bottom:0;
+  margin-top:150px;
 }
 
 #end {
