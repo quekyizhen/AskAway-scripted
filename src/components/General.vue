@@ -1,14 +1,14 @@
 <template>
 <div>
     <div class="tab">
-        <button class="tablinks">London</button>
-        <button class="tablinks">Paris</button>
-        <button class="tablinks">Tokyo</button>
+        <button class="tablinks">Sort By</button>
+        <button class="tablinks">Add</button>
+        <button class="tablinks">Bookmarks</button>
     </div>
 
     <table>
     <tr>
-        <td><p class="qn">Who is Obama?</p> <p class="date">Asked on 10/3/2021</p></td>
+        <td><input type="checkbox"><label class="qn">Who is Obama?</label> <p class="date">Asked on 10/3/2021</p></td>
     </tr>
     <tr>
         <td><p class="qn">Who is Donald Trump?</p> <p class="date">Asked on 1/3/2021</p></td>
@@ -25,20 +25,19 @@
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
-  float: left;
+  float: right;
   border: none;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
   font-size: 17px;
+  font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
 }
 
 /* Change background color of buttons on hover */
