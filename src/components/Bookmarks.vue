@@ -11,7 +11,7 @@
         <a href="#"> Economy</a>
       </div>
       </div> 
-      <router-link to="/bookmarks" exact>Bookmarks</router-link>
+      <a href="#home">Bookmarks</a>
     </div>
 
     <table>
@@ -23,9 +23,13 @@
           <!-- <router-link style="text-decoration: none;" to="/topics"> -->
             <img id="update-button" src="@/assets/exclamation-mark.png" width="30" height="30" @click="clearUpdate()">
           <!-- x -->
-          <div class="qn-list">
+        <div class="qn-list">
             <p class="qn">Who is Obama?</p> <p class="date">Asked on 10/3/2021</p>
-          </div>
+        </div>
+
+        <div class="ans-box">
+            <p> Answer: President <br> Context: ..........</p>
+        </div>
 
         <td>
           <button @click="bookmark(0)" v-show="!this.boxes[0].isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
@@ -107,7 +111,6 @@ button{
 
 }
 
-
 table {
     width:100%;
     /* padding-left: 300px; */
@@ -143,6 +146,11 @@ input[type=checkbox] {
 
 .date {
     font-size: 13px;
+}
+
+.ans-box {
+    font-size: 14px;
+    padding-left: 30px;
 }
 
 #update-button {
