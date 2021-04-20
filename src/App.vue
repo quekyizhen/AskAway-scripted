@@ -95,7 +95,7 @@ h1 {
   background: #20344a;
   text-transform:uppercase;
   font-size:15px;
-  overflow:hidden;
+  overflow:visible;
   position:sticky;
   top:0;
   z-index:1;
@@ -114,7 +114,7 @@ h1 {
   display:inline-block;
   padding:0 30px;
   font-weight: bold;
-  line-height: 85px;
+  line-height: 80px;
   transition:0.5s;
   color:white;
 }
