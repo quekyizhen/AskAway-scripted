@@ -1,64 +1,74 @@
 <template>
 <div>
-    <div class="tab">
+    <!-- <div class="tab">
         <button class="tablinks">Sort By</button>
-        <button class="tablinks">Add</button>
+        <button class="tablinks">Add</button> 
+        <div class="dropdown">
+          <button class="tablinks" @click="dropdownList()">Add</button>
+          <div id="dropdown" class="dropdown-content">
+            <a href="#home">COVID</a>
+            <a href="#about">Tourism</a>
+            <a href="#about">Economy</a>
+          </div>
+        </div>
+
         <button class="tablinks">Bookmarks</button>
+    </div> -->
+
+    <div class="navbar">
+      <a href="#news">Sort by</a>
+      <div class="dropdown">
+      <button class="dropbtn" @click="myFunction()">Add
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content" id="myDropdown">
+        <a href="#"> COVID</a>
+        <a href="#"> Tourism</a>
+        <a href="#"> Economy</a>
+      </div>
+      </div> 
+      <a href="#home">Bookmarks</a>
     </div>
 
     <table>
     <tr>
         <td><input type="checkbox"></td>
-        <td><p class="qn">Who is Obama?</p> <p class="date">Asked on 10/3/2021</p></td>
+        <td>
+          <!-- <button class="close-image"><img src="@/assets/exclamation-mark.png"></button> -->
+          <!-- <router-link style="text-decoration: none;" to="/topics"> -->
+            <img id="update-button" src="@/assets/exclamation-mark.png" width="30" height="30" @click="clearUpdate()">
+          <!-- x -->
+          <div class="qn-list">
+            <p class="qn">Who is Obama?</p> <p class="date">Asked on 10/3/2021</p>
+          </div>
+        </td>
     </tr>
     <tr>
-        <td><input type="checkbox"><button class="close-image"><img src="@/assets/exclamation-mark.png"></button></td>
-        <td><p class="qn">Who is Donald Trump?</p> <p class="date">Asked on 1/3/2021</p></td>
+        <td><input type="checkbox"></td>
+        <td>
+          <div class="qn-list">
+            <p class="qn">Who is Donald Trump?</p> <p class="date">Asked on 1/3/2021</p>
+          </div>
+        </td>
     </tr>
     </table>
 </div>
 </template>
 
 <script>
-
+export default {
+  methods: {
+    clearUpdate() {
+      document.getElementById('update-button').className = "hidden"
+    },
+    myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+  }
+}
 </script>
 
-<style>
-/* Style the tab */
-.tab {
-  overflow: hidden;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: right;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-  font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
+<style scoped>
 
 table {
     width:100%;
@@ -80,34 +90,90 @@ tr:nth-child(odd) {
 input[type=checkbox] {
     width: 15px;
     height: 15px;
-    paddin-right: 50px;
 }
+
+.qn-list {
+  display: inline-block;
+  padding-left: 30px;
+}
+
 .qn {
     font-size: 20px;
     text-decoration: underline;
+    font-weight:bold;
 }
 
 .date {
     font-size: 13px;
 }
-.button {
-  display: inline-block;
-  border-radius: 4px;
-  border: none;
-  color: #f8f8ff;
+
+#update-button {
+  padding-bottom: 10px;
+}
+
+.hidden {display:none;}
+
+.navbar {
+  overflow: hidden;
+  background-color: white;
+  font-weight: bold;
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: black;
   text-align: center;
-  font-size: 12px;
-  padding: 10px;
-  width: 80px;
-  margin: 5px;
+  padding: 14px 16px;
+  text-decoration: none;  
+
 }
-.close-image {
-  background-color: #f8f8ff;
-  border-color: #f8f8ff;
+
+.dropdown {
+  float: right;
+  overflow: hidden;
 }
-.close-image img {
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  font-weight: bold;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: #ddd;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
   display: block;
-  height: 30px;  
-  width: 30px;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
 }
 </style>
