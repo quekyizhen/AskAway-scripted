@@ -49,7 +49,7 @@
           <button class="close-image" @click="dropdownList()"><img src="@/assets/folder.png"></button>
 
           <div id="dropdown" class="drop-content">
-            <a>COVID</a>
+            <a>COVID-19</a>
             <a>Tourism</a>
             <a>Economy</a>
             <a>Create new...</a>
