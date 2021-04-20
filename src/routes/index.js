@@ -10,6 +10,7 @@ import General from "@/components/General";
 import Topics from "@/components/Topics";
 import ForgotPassword from "@/components/ForgotPassword";
 import Latest from "@/components/Latest";
+import Bookmarks from "@/components/Bookmarks";
 
 
 Vue.use(Router)
