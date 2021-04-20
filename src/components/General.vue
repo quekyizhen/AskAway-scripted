@@ -100,6 +100,7 @@ input[type=checkbox] {
 .qn {
     font-size: 20px;
     text-decoration: underline;
+    font-weight:bold;
 }
 
 .date {
