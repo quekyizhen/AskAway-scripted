@@ -1,8 +1,7 @@
 <template>
-
 <div>
 
-  <div class="tab">
+  <!-- <div class="tab">
 
         <button class="tablinks">Sort By</button>
         <button class="tablinks">Add</button> 
@@ -14,9 +13,10 @@
             <a href="#about">Economy</a>
           </div>
         </div>
-
+        </div> -->
+<!-- 
         <button class="tablinks">Bookmarks</button>
-
+ -->
 
     <div class="navbar">
       <a href="#news">Sort by</a>
@@ -69,6 +69,7 @@
     </tr>
     </table>
 </div>
+
 </template>
 <script>
 
@@ -97,7 +98,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 button{
   border: none;
@@ -124,14 +125,12 @@ button{
   font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
 
 }
-</script>
 
-<style scoped>
 
 table {
     width:100%;
     /* padding-left: 300px; */
-    text-align: left;
+    text-align:left;
 }
 th, td {
   padding-left: 20px;
