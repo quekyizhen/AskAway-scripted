@@ -11,7 +11,7 @@
         <a href="#"> Economy</a>
       </div>
       </div> 
-      <router-link to="/bookmarks" exact>Bookmarks</router-link>
+      <a href="#home">Bookmarks</a>
     </div>
 
     <table>
@@ -23,15 +23,24 @@
           <!-- <router-link style="text-decoration: none;" to="/topics"> -->
             <img id="update-button" src="@/assets/exclamation-mark.png" width="30" height="30" @click="clearUpdate()">
           <!-- x -->
-          <div class="qn-list">
-            <p class="qn"><router-link to="/latest" exact>Who is Obama?</router-link></p> <p class="date">Asked on 10/3/2021</p>
-          </div>
+        <div class="qn-list">
+            <p class="qn">Who is Obama?</p> <p class="date">Asked on 10/3/2021</p>
+        </div>
+
+        <div class="ans-box">
+            <p> Answer: President <br> Context: ..........</p>
+        </div>
+
         <td>
-         <bookmark></bookmark>
+          <button @click="bookmark(0)" v-show="!this.boxes[0].isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
+          <button @click="bookmark(0)" v-show="this.boxes[0].isMarked"><img src="@/assets/bookmark_red.png" width ="30" height = "30"></button>
+          <button><img src="@/assets/garbage.png" width ="30" height = "30"></button>
+
         </td>
     </tr>
     <tr>
         <td><input type="checkbox"></td>
+
         <td>
           <div class="qn-list">
             <p class="qn">Who is Donald Trump?</p> <p class="date">Asked on 1/3/2021</p>
@@ -48,9 +57,8 @@
 
 </template>
 <script>
-import Bookmark from "./Bookmark.vue"
+
 export default {
-  
   name: 'button',
   data() {
     return {
@@ -71,9 +79,6 @@ export default {
     myFunction() {
       document.getElementById("myDropdown").classList.toggle("show");
     }
-  },
-  components: {
-    'bookmark':Bookmark
   }
 }
 </script>
@@ -105,7 +110,6 @@ button{
   font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
 
 }
-
 
 table {
     width:100%;
@@ -142,6 +146,11 @@ input[type=checkbox] {
 
 .date {
     font-size: 13px;
+}
+
+.ans-box {
+    font-size: 14px;
+    padding-left: 30px;
 }
 
 #update-button {

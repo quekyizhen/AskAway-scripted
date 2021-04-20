@@ -11,6 +11,7 @@ import Topics from "@/components/Topics";
 import ForgotPassword from "@/components/ForgotPassword";
 import Latest from "@/components/Latest";
 
+
 Vue.use(Router)
 
 export default new Router({
@@ -18,6 +19,7 @@ export default new Router({
         { path: '/general', name: "General",component: General},
         {path:'/latest', name: "Latest", component:Latest},
         { path: '/topics', name: "Topics",component: Topics},
+        { path: '/bookmarks', name: "Bookmarks",component: Bookmarks},
         { path: '/profile', name: "Profile",component: Profile,
             children: [
                 {path:'', component:Account},
@@ -26,8 +28,8 @@ export default new Router({
         },
     { path: '/login', component: Login},
     { path: '/', name: "Home", component: Home},
-        { path: '/register', name: "Register", component: Register},
-        {path:'/forgot', name:"Forgot", component: ForgotPassword}
+    { path: '/register', name: "Register", component: Register},
+    {path:'/forgot', name:"Forgot", component: ForgotPassword}
     ]
 });
 
