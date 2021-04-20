@@ -9,18 +9,36 @@
     <table>
     <tr>
         <td><input type="checkbox"></td>
-        <td><p class="qn">Who is Obama?</p> <p class="date">Asked on 10/3/2021</p></td>
+        <td>
+          <!-- <button class="close-image"><img src="@/assets/exclamation-mark.png"></button> -->
+          <!-- <router-link style="text-decoration: none;" to="/topics"> -->
+            <img id="update-button" src="@/assets/exclamation-mark.png" width="30" height="30" @click="clearUpdate()">
+          <!-- </router-link> -->
+          <div class="qn-list">
+            <p class="qn">Who is Obama?</p> <p class="date">Asked on 10/3/2021</p>
+          </div>
+        </td>
     </tr>
     <tr>
-        <td><input type="checkbox"><button class="close-image"><img src="@/assets/exclamation-mark.png"></button></td>
-        <td><p class="qn">Who is Donald Trump?</p> <p class="date">Asked on 1/3/2021</p></td>
+        <td><input type="checkbox"></td>
+        <td>
+          <div class="qn-list">
+            <p class="qn">Who is Donald Trump?</p> <p class="date">Asked on 1/3/2021</p>
+          </div>
+        </td>
     </tr>
     </table>
 </div>
 </template>
 
 <script>
-
+export default {
+  methods: {
+    clearUpdate() {
+      document.getElementById('update-button').className = "hidden"
+    }
+  }
+}
 </script>
 
 <style>
@@ -40,6 +58,7 @@
   transition: 0.3s;
   font-size: 17px;
   font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 
 /* Change background color of buttons on hover */
@@ -80,8 +99,13 @@ tr:nth-child(odd) {
 input[type=checkbox] {
     width: 15px;
     height: 15px;
-    paddin-right: 50px;
 }
+
+.qn-list {
+  display: inline-block;
+  padding-left: 30px;
+}
+
 .qn {
     font-size: 20px;
     text-decoration: underline;
@@ -90,24 +114,12 @@ input[type=checkbox] {
 .date {
     font-size: 13px;
 }
-.button {
-  display: inline-block;
-  border-radius: 4px;
-  border: none;
-  color: #f8f8ff;
-  text-align: center;
-  font-size: 12px;
-  padding: 10px;
-  width: 80px;
-  margin: 5px;
+
+#update-button {
+  padding-bottom: 10px;
 }
-.close-image {
-  background-color: #f8f8ff;
-  border-color: #f8f8ff;
-}
-.close-image img {
-  display: block;
-  height: 30px;  
-  width: 30px;
-}
+
+.hidden {display:none;}
+
+.show {display:inLine !important;}
 </style>
