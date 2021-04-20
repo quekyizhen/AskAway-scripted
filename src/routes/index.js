@@ -9,12 +9,14 @@ import Register from "@/components/Register";
 import General from "@/components/General";
 import Topics from "@/components/Topics";
 import ForgotPassword from "@/components/ForgotPassword";
+import Latest from "@/components/Latest";
 
 Vue.use(Router)
 
 export default new Router({
     routes: [
         { path: '/general', name: "General",component: General},
+        {path:'/latest', name: "Latest", component:Latest},
         { path: '/topics', name: "Topics",component: Topics},
         { path: '/profile', name: "Profile",component: Profile,
             children: [

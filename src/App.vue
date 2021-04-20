@@ -4,8 +4,8 @@
       <h1><router-link to="/" exact><img src="@/assets/logo_name.png" width="245" height="53" alt="logo words"></router-link></h1>
       <div v-if="signedIn" class="link"><router-link to="/profile" exact>My Profile</router-link></div>
       <div v-else><div class="link"><router-link to="/login" exact>Login/Register</router-link></div></div>
-      <div class="link"><keep-alive><router-link to="/topics" exact>Topics</router-link></keep-alive></div>
-      <div class="link"><keep-alive><router-link to="/general" exact>General</router-link></keep-alive></div>
+      <div class="link"><router-link to="/topics" exact>Topics</router-link></div>
+      <div class="link"><router-link to="/general" exact>General</router-link></div>
 
     </div>
   
@@ -81,13 +81,13 @@ h1 {
 }
 #header {
   width:100%;
-  height:100px;
+  height:80px;
   color:black;
   background: #20344a;
   text-transform:uppercase;
   font-size:15px;
   overflow:hidden;
-  position: sticky;
+  position:sticky;
   top:0;
   z-index:999;
 }
@@ -105,7 +105,7 @@ h1 {
   display:inline-block;
   padding:0 40px;
   font-weight: bold;
-  line-height: 100px;
+  line-height: 85px;
   transition:0.5s;
   color:white;
 }
@@ -117,16 +117,18 @@ h1 {
 
 #copyright {
   width:calc(100% - 100px);
-  height:10px;
-  padding:50px;
+  height:50px;
+  padding:0 50px;
   background:#20344a;
   color:white;
   font-weight:lighter;
   font-size:15px;
-  line-height:10px;
-  bottom:0;
-  margin-top:150px;
+  line-height:50px;
+  bottom:auto;
+  overflow:hidden;
+  margin-top:192px;
 }
+
 
 #end {
   background-color: rgb(32,52,79);
