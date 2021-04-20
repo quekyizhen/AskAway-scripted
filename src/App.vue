@@ -95,8 +95,8 @@ h1 {
   color:black;
   background: #20344a;
   text-transform:uppercase;
-  font-size:15px;
-  overflow:hidden;
+  font-size:14px;
+  overflow:visible;
   position: sticky;
   top:0;
   z-index:1;
@@ -113,7 +113,7 @@ h1 {
 #header a {
   float:right;
   display:inline-block;
-  padding:0 40px;
+  padding:0 30px;
   font-weight: bold;
   line-height: 100px;
   transition:0.5s;
@@ -154,18 +154,20 @@ h1 {
 
 .dropdown-content {
   display: none;
-  position: relative;
-  background-color: #f9f9f9;
+  position: absolute;
+  background-color: #20344a;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  text-align: left;
 }
 
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
-  display: inline-block;
+  display: block;
+  text-align: left;
 }
 
 .dropdown:hover .dropdown-content {
@@ -181,7 +183,7 @@ h1 {
   font-weight: bold;
   line-height: 100px;
   transition:0.5s;
-  color:white;
+  color:black;
 }
 
 </style>
