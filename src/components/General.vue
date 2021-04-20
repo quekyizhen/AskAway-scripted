@@ -1,6 +1,9 @@
 <template>
+
 <div>
-    <!-- <div class="tab">
+
+  <div class="tab">
+
         <button class="tablinks">Sort By</button>
         <button class="tablinks">Add</button> 
         <div class="dropdown">
@@ -13,7 +16,7 @@
         </div>
 
         <button class="tablinks">Bookmarks</button>
-    </div> -->
+
 
     <div class="navbar">
       <a href="#news">Sort by</a>
@@ -33,6 +36,7 @@
     <table>
     <tr>
         <td><input type="checkbox"></td>
+
         <td>
           <!-- <button class="close-image"><img src="@/assets/exclamation-mark.png"></button> -->
           <!-- <router-link style="text-decoration: none;" to="/topics"> -->
@@ -41,30 +45,84 @@
           <div class="qn-list">
             <p class="qn">Who is Obama?</p> <p class="date">Asked on 10/3/2021</p>
           </div>
+
+        <td>
+          <button @click="bookmark(0)" v-show="!this.boxes[0].isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
+          <button @click="bookmark(0)" v-show="this.boxes[0].isMarked"><img src="@/assets/bookmark_red.png" width ="30" height = "30"></button>
+          <button><img src="@/assets/garbage.png" width ="30" height = "30"></button>
+
         </td>
     </tr>
     <tr>
         <td><input type="checkbox"></td>
+
         <td>
           <div class="qn-list">
             <p class="qn">Who is Donald Trump?</p> <p class="date">Asked on 1/3/2021</p>
           </div>
+        <td width = "130"><centre>
+          <button  @click="bookmark(1)" v-show="!this.boxes[1].isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
+          <button  @click="bookmark(1)" v-show="this.boxes[1].isMarked"><img src="@/assets/bookmark_red.png" width ="30" height = "30"></button>
+          <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
+
         </td>
     </tr>
     </table>
 </div>
 </template>
-
 <script>
+
 export default {
+  name: 'button',
+  data() {
+    return {
+      boxes:
+      [
+        {isMarked: false},
+        {isMarked: false}
+      ]
+  }
+  },
   methods: {
-    clearUpdate() {
+    bookmark(idx) {
+      this.boxes[idx].isMarked = !this.boxes[idx].isMarked;
+    },
+     clearUpdate() {
       document.getElementById('update-button').className = "hidden"
     },
     myFunction() {
       document.getElementById("myDropdown").classList.toggle("show");
     }
   }
+}
+</script>
+
+<style>
+
+button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding-left: 25px
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: right;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
+
 }
 </script>
 
