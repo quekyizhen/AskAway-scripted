@@ -3,8 +3,7 @@
     <div id="header">
       <h1><router-link to="/" exact><img src="@/assets/logo_name.png" width="245" height="53" alt="logo words"></router-link></h1>
       <div v-if="signedIn" class="link"><router-link to="/profile" exact>My Profile</router-link></div>
-      <div v-else><div class="link"><router-link to="/login" exact>Login/Register</router-link></div></div>
-      <!-- <div class="link"><router-link to="/topics" exact>Topics</router-link></div> -->
+      <div v-else><div class="link"><router-link to="/login" exact>Login</router-link></div></div>
   
       <div class="dropdown">
         <a class="link">Topics</a>
@@ -156,20 +155,14 @@ h1 {
   display: none;
   position: absolute;
   background-color: #20344a;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  min-width: 120px;
+  z-index: -99;
   text-align: left;
+  padding-top: 70px;
 }
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+.dropdown:hover {
+  background: #4e5e70;
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -179,9 +172,9 @@ h1 {
   /* display: inline-block; */
   float: right;
   display:inline-block;
-  padding:0 40px;
+  padding:0 30px;
   font-weight: bold;
-  line-height: 100px;
+  line-height: 20px;
   transition:0.5s;
   color:black;
 }
