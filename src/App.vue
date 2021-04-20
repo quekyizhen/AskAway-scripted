@@ -4,7 +4,17 @@
       <h1><router-link to="/" exact><img src="@/assets/logo_name.png" width="245" height="53" alt="logo words"></router-link></h1>
       <div v-if="signedIn" class="link"><router-link to="/profile" exact>My Profile</router-link></div>
       <div v-else><div class="link"><router-link to="/login" exact>Login/Register</router-link></div></div>
-      <div class="link"><router-link to="/topics" exact>Topics</router-link></div>
+      <!-- <div class="link"><router-link to="/topics" exact>Topics</router-link></div> -->
+  
+      <div class="dropdown">
+        <a class="link">Topics</a>
+        <div class="dropdown-content">
+            <router-link to="/topics" exact>COVID-19</router-link>
+            <a>Tourism</a>
+            <a>Economy</a>
+        </div>
+      </div>
+
       <div class="link"><router-link to="/general" exact>General</router-link></div>
 
     </div>
@@ -89,7 +99,7 @@ h1 {
   overflow:hidden;
   position: sticky;
   top:0;
-  z-index:999;
+  z-index:1;
 }
 
 #header h1 {
@@ -142,6 +152,37 @@ h1 {
   border-radius: 8px;
 }
 
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown {
+  position: relative;
+  /* display: inline-block; */
+  float: right;
+  display:inline-block;
+  padding:0 40px;
+  font-weight: bold;
+  line-height: 100px;
+  transition:0.5s;
+  color:white;
+}
 
 </style>
 

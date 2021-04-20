@@ -45,10 +45,10 @@
 
         <div class="divider"></div>
 
-        <div class="dropdown">
+        <div class="drop">
           <button class="close-image" @click="dropdownList()"><img src="@/assets/folder.png"></button>
 
-          <div id="dropdown" class="dropdown-content">
+          <div id="dropdown" class="drop-content">
             <a>COVID</a>
             <a>Tourism</a>
             <a>Economy</a>
@@ -143,11 +143,11 @@ input[type=text] {
     height:auto;
     display:inline-block;
 }
-.dropdown {
+.drop{
   position: relative;
   display: inline-block;
 }
-.dropdown-content {
+.drop-content {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -156,14 +156,14 @@ input[type=text] {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 999;
 }
-.dropdown-content a {
+.drop-content a {
   color: black;
   padding: 10px 12px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
-.dropdown a:hover {background-color: #ddd;}
+.drop a:hover {background-color: #ddd;}
 .show {display: block;}
 </style>
 

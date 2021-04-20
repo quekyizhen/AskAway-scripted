@@ -1,27 +1,12 @@
 <template>
 <div>
-    <!-- <div class="tab">
-        <button class="tablinks">Sort By</button>
-        <button class="tablinks">Add</button> 
-        <div class="dropdown">
-          <button class="tablinks" @click="dropdownList()">Add</button>
-          <div id="dropdown" class="dropdown-content">
-            <a href="#home">COVID</a>
-            <a href="#about">Tourism</a>
-            <a href="#about">Economy</a>
-          </div>
-        </div>
-
-        <button class="tablinks">Bookmarks</button>
-    </div> -->
 
     <div class="navbar">
       <a href="#news">Sort by</a>
-      <div class="dropdown">
+      <div class="drop">
       <button class="dropbtn" @click="myFunction()">Add
-        <i class="fa fa-caret-down"></i>
       </button>
-      <div class="dropdown-content" id="myDropdown">
+      <div class="drop-content" id="myDropdown">
         <a href="#"> COVID</a>
         <a href="#"> Tourism</a>
         <a href="#"> Economy</a>
@@ -129,12 +114,12 @@ input[type=checkbox] {
 
 }
 
-.dropdown {
+.drop {
   float: right;
   overflow: hidden;
 }
 
-.dropdown .dropbtn {
+.drop .dropbtn {
   cursor: pointer;
   font-size: 16px;  
   border: none;
@@ -147,11 +132,11 @@ input[type=checkbox] {
   font-weight: bold;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+.navbar a:hover, .drop:hover .dropbtn, .dropbtn:focus {
   background-color: #ddd;
 }
 
-.dropdown-content {
+.drop-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -160,7 +145,7 @@ input[type=checkbox] {
   z-index: 1;
 }
 
-.dropdown-content a {
+.drop-content a {
   float: none;
   color: black;
   padding: 12px 16px;
@@ -169,7 +154,7 @@ input[type=checkbox] {
   text-align: left;
 }
 
-.dropdown-content a:hover {
+.drop-content a:hover {
   background-color: #ddd;
 }
 
