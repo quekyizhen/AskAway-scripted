@@ -1,31 +1,70 @@
 <template>
 
-
 <div>
-  
+
   <div class="tab">
+
         <button class="tablinks">Sort By</button>
-        <button class="tablinks">Add</button>
+        <button class="tablinks">Add</button> 
+        <div class="dropdown">
+          <button class="tablinks" @click="dropdownList()">Add</button>
+          <div id="dropdown" class="dropdown-content">
+            <a href="#home">COVID</a>
+            <a href="#about">Tourism</a>
+            <a href="#about">Economy</a>
+          </div>
+        </div>
+
         <button class="tablinks">Bookmarks</button>
+
+
+    <div class="navbar">
+      <a href="#news">Sort by</a>
+      <div class="dropdown">
+      <button class="dropbtn" @click="myFunction()">Add
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content" id="myDropdown">
+        <a href="#"> COVID</a>
+        <a href="#"> Tourism</a>
+        <a href="#"> Economy</a>
+      </div>
+      </div> 
+      <a href="#home">Bookmarks</a>
     </div>
 
     <table>
     <tr>
         <td><input type="checkbox"></td>
-        <td><p class="qn">Who is Obama?</p> <p class="date">Asked on 10/3/2021</p></td>
+
+        <td>
+          <!-- <button class="close-image"><img src="@/assets/exclamation-mark.png"></button> -->
+          <!-- <router-link style="text-decoration: none;" to="/topics"> -->
+            <img id="update-button" src="@/assets/exclamation-mark.png" width="30" height="30" @click="clearUpdate()">
+          <!-- x -->
+          <div class="qn-list">
+            <p class="qn">Who is Obama?</p> <p class="date">Asked on 10/3/2021</p>
+          </div>
+
         <td>
           <button @click="bookmark(0)" v-show="!this.boxes[0].isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
           <button @click="bookmark(0)" v-show="this.boxes[0].isMarked"><img src="@/assets/bookmark_red.png" width ="30" height = "30"></button>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button>
+
         </td>
     </tr>
     <tr>
         <td><input type="checkbox"></td>
-        <td><p class="qn">Who is Donald Trump?</p> <p class="date">Asked on 1/3/2021</p></td>
+
+        <td>
+          <div class="qn-list">
+            <p class="qn">Who is Donald Trump?</p> <p class="date">Asked on 1/3/2021</p>
+          </div>
         <td width = "130"><centre>
           <button  @click="bookmark(1)" v-show="!this.boxes[1].isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
           <button  @click="bookmark(1)" v-show="this.boxes[1].isMarked"><img src="@/assets/bookmark_red.png" width ="30" height = "30"></button>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
+
         </td>
     </tr>
     </table>
@@ -47,18 +86,26 @@ export default {
   methods: {
     bookmark(idx) {
       this.boxes[idx].isMarked = !this.boxes[idx].isMarked;
+    },
+     clearUpdate() {
+      document.getElementById('update-button').className = "hidden"
+    },
+    myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
     }
   }
 }
 </script>
 
 <style>
+
 button{
   border: none;
   background: none;
   cursor: pointer;
   padding-left: 25px
 }
+
 /* Style the tab */
 .tab {
   overflow: hidden;
@@ -75,25 +122,11 @@ button{
   transition: 0.3s;
   font-size: 17px;
   font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
-}
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
 }
+</script>
 
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
+<style scoped>
 
 table {
     width:100%;
@@ -112,81 +145,93 @@ tr:nth-child(odd) {
  background-color: #fff;
 }
 
+input[type=checkbox] {
+    width: 15px;
+    height: 15px;
+}
+
+.qn-list {
+  display: inline-block;
+  padding-left: 30px;
+}
+
 .qn {
     font-size: 20px;
     text-decoration: underline;
+    font-weight:bold;
 }
 
 .date {
     font-size: 13px;
 }
 
-/* The container */
-.container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
+#update-button {
+  padding-bottom: 10px;
+}
+
+.hidden {display:none;}
+
+.navbar {
+  overflow: hidden;
+  background-color: white;
+  font-weight: bold;
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;  
+
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
   cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  font-weight: bold;
 }
 
-/* Hide the browser's default checkbox */
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: #ddd;
 }
 
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-}
-
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: #2196F3;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
+.dropdown-content {
   display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
   display: block;
+  text-align: left;
 }
 
-/* Style the checkmark/indicator */
-.container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
 }
 </style>
-

@@ -1,7 +1,15 @@
 <template>
   <div>
-    <center><img src="@/assets/qa_system_image.jpeg" width="800" height="400" alt="QA Image"></center>
+    <img id="display-image" src="@/assets/qa_system_image.jpeg" width="800" height="400" alt="QA Image">
     
+    <div id="intro"> 
+      Our Question Answering system aims to answer diverse questions with short, precise answers as it has been
+      trained on multiple Reading Comprehension datasets. 
+      Simply input any question and the top 4 answers will be returned. Ask away!
+    </div>
+
+    <br>
+
     <div id="qn-box">
       <label for="qn">Ask a Question:</label><br>
       <input type="text" id="qn" name="qn" placeholder="Type question here..."><br>
@@ -41,9 +49,10 @@
           <button class="close-image" @click="dropdownList()"><img src="@/assets/folder.png"></button>
 
           <div id="dropdown" class="dropdown-content">
-            <a href="#home">Sports</a>
-            <a href="#about">Politics</a>
-            <a href="#contact">Create new...</a>
+            <a>COVID</a>
+            <a>Tourism</a>
+            <a>Economy</a>
+            <a>Create new...</a>
           </div>
         </div>
       </div>
@@ -84,17 +93,26 @@ input[type=text] {
   box-sizing: border-box;
 }
 
-#qn-box {
-  padding-left: 250px;
+#display-image {
+  padding-left: 300px;
   padding-right: 300px;
 }
 
+#intro {
+  padding-left: 300px;
+  padding-right: 300px;
+  font-weight: bold;
+}
+
+#qn-box {
+  padding-left: 300px;
+  padding-right: 300px;
+}
 #ans-box {
   display: none;
-  padding-left: 250px;
+  padding-left: 300px;
   padding-right: 300px;
 }
-
 .button-area {
   text-align: right;
 }
@@ -120,18 +138,15 @@ input[type=text] {
   height: 30px;  
   width: 30px;
 }
-
 .divider{
     width:10px;
     height:auto;
     display:inline-block;
 }
-
 .dropdown {
   position: relative;
   display: inline-block;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -139,9 +154,8 @@ input[type=text] {
   min-width: 160px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 999;
 }
-
 .dropdown-content a {
   color: black;
   padding: 10px 12px;
@@ -149,9 +163,7 @@ input[type=text] {
   display: block;
   text-align: left;
 }
-
 .dropdown a:hover {background-color: #ddd;}
-
 .show {display: block;}
 </style>
 
