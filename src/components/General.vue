@@ -6,7 +6,7 @@
       <button class="dropbtn">Add
       </button>
       <div class="drop-content" id="myDropdown">
-        <a href="#"> COVID-19</a>
+        <router-link to= "/topics" exact> COVID-19</router-link>
         <a href="#"> Tourism</a>
         <a href="#"> Economy</a>
       </div>

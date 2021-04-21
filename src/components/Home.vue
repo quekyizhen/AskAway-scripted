@@ -1,11 +1,12 @@
 <template>
   <div>
-    <img id="display-image" src="@/assets/qa_system_image.jpeg" width="800" height="400" alt="QA Image">
+    <h1>Welcome to AskAway!</h1>
+    <img id="display-image" src="@/assets/qa_system_image.jpeg" width="700" height="350" alt="QA Image">
     
     <div id="intro"> 
       Our Question Answering system aims to answer diverse questions with short, precise answers as it has been
       trained on multiple Reading Comprehension datasets. 
-      Simply input any question and the top 4 answers will be returned. Ask away!
+      Simply input any question and the top 4 answers will be returned. 
     </div>
 
     <br>
@@ -83,6 +84,10 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  padding-left: 530px;
+  font-size: 35px;
+}
 input[type=text] {
   width: 100%;
   padding: 10px 20px;
@@ -102,6 +107,7 @@ input[type=text] {
   padding-left: 300px;
   padding-right: 300px;
   font-weight: bold;
+  font-size: 18px;
 }
 
 #qn-box {
