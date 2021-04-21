@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <body>
     <h1>Welcome to AskAway!</h1>
     <img id="display-image" src="@/assets/qa_system_image.jpeg" width="700" height="350" alt="QA Image">
     
@@ -60,7 +60,7 @@
       
     </div>  
 
-  </div>
+  </body>
 </template>
 
 <script>
@@ -84,9 +84,11 @@ export default {
 </script>
 
 <style scoped>
+
 h1 {
-  padding-left: 530px;
+  padding-left: 440px;
   font-size: 35px;
+  
 }
 input[type=text] {
   width: 100%;
@@ -99,7 +101,7 @@ input[type=text] {
 }
 
 #display-image {
-  padding-left: 220px;
+  padding-left: 270px;
   padding-right: 300px;
 }
 
@@ -171,5 +173,6 @@ input[type=text] {
 }
 .drop a:hover {background-color: #ddd;}
 .show {display: block;}
+
 </style>
 

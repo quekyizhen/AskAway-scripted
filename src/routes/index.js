@@ -11,7 +11,7 @@ import Topics from "@/components/Topics";
 import ForgotPassword from "@/components/ForgotPassword";
 import Latest from "@/components/Latest";
 import Bookmarks from "@/components/Bookmarks";
-import All from "@/components/AllAns";
+import All from "@/components/All";
 
 
 Vue.use(Router)
@@ -20,7 +20,6 @@ export default new Router({
     routes: [
         { path: '/general', name: "General",component: General},
         {path:'/latest', name: "Latest", component:Latest},
-        {path:'/all', name: "All", component:All},
         { path: '/topics', name: "Topics",component: Topics},
         { path: '/bookmarks', name: "Bookmarks",component: Bookmarks},
         { path: '/profile', name: "Profile",component: Profile,
@@ -32,7 +31,8 @@ export default new Router({
     { path: '/login', component: Login},
     { path: '/', name: "Home", component: Home},
     { path: '/register', name: "Register", component: Register},
-    {path:'/forgot', name:"Forgot", component: ForgotPassword}
+    {path:'/forgot', name:"Forgot", component: ForgotPassword},
+    {path:'/all', name: "All", component:All},
     ]
 });
 
