@@ -19,10 +19,8 @@
         <td><input type="checkbox"></td>
 
         <td>
-          <!-- <button class="close-image"><img src="@/assets/exclamation-mark.png"></button> -->
-          <!-- <router-link style="text-decoration: none;" to="/topics"> -->
-            <img id="update-button" src="@/assets/exclamation-mark.png" width="30" height="30" @click="clearUpdate()">
-          <!-- x -->
+
+        <!-- <img id="update-button" src="@/assets/exclamation-mark.png" width="30" height="30" @click="clearUpdate()"> -->
         <div class="qn-list">
             <p class="qn">Who is Obama?</p> <p class="date">Asked on 10/3/2021</p>
         </div>
@@ -85,9 +83,9 @@ export default {
     bookmark(idx) {
       this.boxes[idx].isMarked = !this.boxes[idx].isMarked;
     },
-     clearUpdate() {
-      document.getElementById('update-button').className = "hidden"
-    },
+    //  clearUpdate() {
+    //   document.getElementById('update-button').className = "hidden"
+    // },
     myFunction() {
       document.getElementById("myDropdown").classList.toggle("show");
     }
