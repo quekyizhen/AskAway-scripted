@@ -159,7 +159,7 @@ input[type=checkbox] {
 
 .navbar a {
   float: right;
-  font-size: 16px;
+  font-size: 18px;
   color: black;
   text-align: center;
   padding: 14px 16px;
@@ -174,7 +174,7 @@ input[type=checkbox] {
 
 .drop .dropbtn {
   cursor: pointer;
-  font-size: 16px;  
+  font-size: 18px;  
   border: none;
   outline: none;
   color: black;

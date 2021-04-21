@@ -9,7 +9,7 @@
   <label for="password">Password:</label><br>
   <input type="password" v-model="password" value="password" id="password"><br>
     <div id = "forgot"><router-link to="/forgot">Forgot Password?</router-link><br></div>
-    <button type="submit"><router-link to="/">Log In</router-link></button>
+    <button type="submit"><router-link to="/" style="color:white; text-decoration:none">Log In</router-link></button>
     <ul v-if="errors.length">
       <li v-for="error in errors" :key="error">
         {{error}}
@@ -75,7 +75,6 @@ button {
   color: white;
   padding: 12px 20px;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
   font-size: 14px;
   font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;

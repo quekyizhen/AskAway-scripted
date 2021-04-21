@@ -27,8 +27,20 @@
             <p class="qn">Who is Obama?</p> <p class="date">Asked on 10/3/2021</p>
         </div>
 
-        <div class="ans-box">
-            <p> Answer: President <br> Context: ..........</p>
+        <div class="ans">
+          <span class="ansTitle"> Answer: </span>
+          <span class="ansText">
+              44th president of the United States
+          </span>
+          <br>
+          <span class="ansTitle"> Context:</span>
+          <span class="ansText">
+                  Barack Hussein Obama II is an American politician and attorney 
+                  who served as the <span class="highlightedText">44th president of the United States </span>
+                  2009 to 2017.
+                  A member of the Democratic Party, Obama was the first African-American president 
+                  of the United States.
+          </span>
         </div>
 
         <td>
@@ -148,11 +160,34 @@ input[type=checkbox] {
     font-size: 13px;
 }
 
-.ans-box {
-    font-size: 14px;
-    padding-left: 30px;
+.ans{
+    height:fit-content;
+    padding-left: 10px;
+    text-align: left;
+    line-height: 30px;
+    margin-bottom: 20px;
+    padding-right: 30px;
+    display: inline-block;
+  }
+.ansTitle {
+    font-size: 17px;
+    font-weight:bold;
+    padding-right:20px;
+    padding-left: 20px;
+    text-align:left;
+    white-space: nowrap
+}
+.ansText {
+    font-size: 17px;
+    font-weight:normal;
+    margin-left:10px;
+    text-align: left;
 }
 
+.highlightedText {
+  background-color:#ffffd5;
+  font-weight:bold;
+}
 #update-button {
   padding-bottom: 10px;
 }
@@ -167,7 +202,7 @@ input[type=checkbox] {
 
 .navbar a {
   float: right;
-  font-size: 16px;
+  font-size: 18px;
   color: black;
   text-align: center;
   padding: 14px 16px;
@@ -182,7 +217,7 @@ input[type=checkbox] {
 
 .drop .dropbtn {
   cursor: pointer;
-  font-size: 16px;  
+  font-size: 18px;  
   border: none;
   outline: none;
   color: black;
