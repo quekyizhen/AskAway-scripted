@@ -69,6 +69,7 @@ html, body {
 a {
   text-decoration: none;
   color:inherit;
+  cursor: pointer;
 }
 
 b {
@@ -136,6 +137,8 @@ h1 {
   bottom:auto;
   overflow:hidden;
   margin-top:192px;
+  padding-bottom:5px;
+  /* margin-top:auto; */
 }
 
 
@@ -165,6 +168,7 @@ h1 {
 .dropdown:hover {
   background: #4e5e70;
 }
+
 .dropdown:hover .dropdown-content {
   display: block;
 }

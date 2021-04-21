@@ -3,7 +3,7 @@
     <div class="navbar">
       <a href="#news">Sort by</a>
       <div class="drop">
-      <button class="dropbtn" @click="myFunction()">Add
+      <button class="dropbtn">Add
       </button>
       <div class="drop-content" id="myDropdown">
         <router-link to= "/topics" exact> COVID-19</router-link>
@@ -26,7 +26,7 @@
             <p class="qn"><router-link to="/latest" exact>Who is Obama?</router-link></p> <p class="date">Asked on 10/3/2021</p>
           </div>
         <td>
-         <bookmark></bookmark>
+         <bookmark style="display:inline"></bookmark><button><img src="@/assets/garbage.png" width ="30" height = "30"></button>
         </td>
     </tr>
     <tr>
@@ -47,7 +47,7 @@
 
 </template>
 <script>
-import Bookmark from "./Bookmark.vue"
+import Bookmark from "./BookmarkButton.vue"
 export default {
   
   name: 'button',
@@ -66,10 +66,10 @@ export default {
     },
      clearUpdate() {
       document.getElementById('update-button').className = "hidden"
-    },
-    myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
     }
+    // myFunction() {
+    //   document.getElementById("myDropdown").classList.toggle("show");
+    // }
   },
   components: {
     'bookmark':Bookmark
@@ -160,7 +160,7 @@ input[type=checkbox] {
   font-size: 18px;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 16px;
   text-decoration: none;  
 
 }
@@ -176,7 +176,7 @@ input[type=checkbox] {
   border: none;
   outline: none;
   color: black;
-  padding: 14px 16px;
+  padding: 10px 16px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
@@ -186,6 +186,8 @@ input[type=checkbox] {
 .navbar a:hover, .drop:hover .dropbtn, .dropbtn:focus {
   background-color: #ddd;
 }
+
+.drop:hover .drop-content {display: block;}
 
 .drop-content {
   display: none;

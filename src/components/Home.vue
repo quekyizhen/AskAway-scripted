@@ -99,7 +99,7 @@ input[type=text] {
 }
 
 #display-image {
-  padding-left: 350px;
+  padding-left: 220px;
   padding-right: 300px;
 }
 
