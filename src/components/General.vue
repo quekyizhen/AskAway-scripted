@@ -21,8 +21,7 @@
         <td>
           <!-- <button class="close-image"><img src="@/assets/exclamation-mark.png"></button> -->
           <!-- <router-link style="text-decoration: none;" to="/topics"> -->
-            <img id="update-button" src="@/assets/exclamation-mark.png" width="30" height="30" @click="clearUpdate()">
-          <!-- x -->
+            <router-link to="/latest"><img id="update-button" src="@/assets/exclamation-mark.png" width="30" height="30" @click="clearUpdate()"></router-link>
           <div class="qn-list">
             <p class="qn"><router-link to="/latest" exact>Who is Obama?</router-link></p> <p class="date">Asked on 10/3/2021</p>
           </div>
