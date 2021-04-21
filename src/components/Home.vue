@@ -140,6 +140,7 @@ input[type=text] {
 .close-image {
   background-color: white;
   border-color: #F5F5F5;
+  cursor: pointer;
 }
 .close-image img {
   display: block;

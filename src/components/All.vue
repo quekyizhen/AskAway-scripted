@@ -5,6 +5,7 @@
       <a><router-link to="/all" exact>All</router-link></a>
       <a><router-link to="/latest" exact>Latest</router-link></a>
     </div>
+    <div id ="table">
     <centre>
     <div id="head">
         <div class="question"> Question:
@@ -16,18 +17,22 @@
     <table>
         <tr>
             <th style ="width: 50px">Date</th>
-            <th>Answers</th>
+            <th colspan="2">Answers</th>
             </tr>
         <tr>
             <td>
                 <p class="date"> 01/04/2021</p></td>
-            <td>
+            <td> 
                 <div class="qn-list">
                 <p class="qn"><router-link to="/latest" exact>44th president of the United States</router-link></p>
                 </div> 
-                <bookmark class="mark" style="display:inline"></bookmark>
             </td>
+                <td style ="width: 30px">
+                  <bookmark class="mark" style="display:inline"></bookmark>
+                </td>
+            
         </tr>
+        
 
         <tr>
             <td>
@@ -36,12 +41,16 @@
             <td>
                 <div class="qn-list">
                 <p class="qn">Ex president of the United States</p>
-                </div> 
-                <bookmark class="mark" style="display:inline"></bookmark>
-            </td>
+                </div>
+                </td>
+
+                <td style ="width: 30px">
+                  <bookmark class="mark" style="display:inline"></bookmark>
+                  </td>
         </tr>
 
     </table>
+</div>
 </div>
 
 </template>
@@ -66,6 +75,8 @@ button{
 }
 .date {
     font-size: 18px;
+    padding-left:10px;
+    padding-right:10px;
 }
 
 .qn-list {
@@ -80,7 +91,7 @@ button{
 .question {
     font-size: 20px;
     font-weight:bold;
-    padding-left:130px;
+    padding-left:90px;
 }
 .question .text {
     font-size: 18px;
@@ -125,9 +136,11 @@ button{
 table {
     /* padding-left: 300px; */
     text-align:left;
-    margin-left:220px;
+    margin-left:180px;
     border: 1px solid #ddd;
     border-collapse: collapse;
+    width: 900px;
+    table-layout:auto;
 }
 
 th {
@@ -141,24 +154,24 @@ th {
 tr:nth-child(odd){background-color: #f8f8ff}
 
 td {
-  padding-left: 20px;
-  padding-top: 12px;
-  padding-bottom: 12px;
   text-align: left;
   font-size:18px;
-  padding: 8px;
+  padding-left: 10px;
   border: 1px solid #ddd;
+  overflow: visible;
+  border-right:transparent
+}
+
+td:last-child {
+  border-left:transparent;
 }
 
 .mark {
-  /* margin: 0px;
-  padding-top:20px;  */
-  padding-left:340px;
-  top: 5px;
-  left:20px;
-  /* line-height:20px; */
-  position: sticky;
-  /* left:800px; */
+  padding-right:20px;
+}
+
+#table {
+  margin-left: 20px;
 }
 
 </style>

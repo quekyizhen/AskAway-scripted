@@ -58,7 +58,7 @@ export default {
 <style scoped>
 #login {
   padding-top:30px;
-  padding-left: 450px;
+  padding-left: 430px;
   padding-bottom: 0px;
 }
 input {

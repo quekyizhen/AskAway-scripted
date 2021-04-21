@@ -178,7 +178,7 @@ h1 {
   /* display: inline-block; */
   float: right;
   display:inline-block;
-  padding:0 30px;
+  padding:0 23px;
   font-weight: bold;
   line-height: 20px;
   transition:0.5s;
