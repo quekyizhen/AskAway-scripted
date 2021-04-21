@@ -36,8 +36,8 @@
             <p class="qn">Who is Donald Trump?</p> <p class="date">Asked on 1/3/2021</p>
           </div>
         <td width = "130"><centre>
-          <button  @click="bookmark(1)" v-show="!this.boxes[1].isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
-          <button  @click="bookmark(1)" v-show="this.boxes[1].isMarked"><img src="@/assets/bookmark_red.png" width ="30" height = "30"></button>
+
+          <bookmark style="display:inline"></bookmark>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
 
         </td>
@@ -50,27 +50,19 @@
 import Bookmark from "./BookmarkButton.vue"
 export default {
   
-  name: 'button',
-  data() {
-    return {
-      boxes:
-      [
-        {isMarked: false},
-        {isMarked: false}
-      ]
-  }
-  },
-  methods: {
-    bookmark(idx) {
-      this.boxes[idx].isMarked = !this.boxes[idx].isMarked;
-    },
-     clearUpdate() {
-      document.getElementById('update-button').className = "hidden"
-    }
-    // myFunction() {
-    //   document.getElementById("myDropdown").classList.toggle("show");
-    // }
-  },
+  name: 'general',
+
+  // methods: {
+  //   bookmark(idx) {
+  //     this.boxes[idx].isMarked = !this.boxes[idx].isMarked;
+  //   },
+  //    clearUpdate() {
+  //     document.getElementById('update-button').className = "hidden"
+  //   }
+  //   // myFunction() {
+  //   //   document.getElementById("myDropdown").classList.toggle("show");
+  //   // }
+  // },
   components: {
     'bookmark':Bookmark
   }

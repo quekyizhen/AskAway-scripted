@@ -26,8 +26,7 @@
         </td>
 
         <td>
-          <button @click="bookmark(0)" v-show="!this.boxes[0].isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
-          <button @click="bookmark(0)" v-show="this.boxes[0].isMarked"><img src="@/assets/bookmark_red.png" width ="30" height = "30"></button>
+          <bookmark style="display:inline"></bookmark>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button>
 
         </td>
@@ -41,8 +40,7 @@
           </div>
         </td>
         <td width = "130"><centre>
-          <button  @click="bookmark(1)" v-show="!this.boxes[1].isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
-          <button  @click="bookmark(1)" v-show="this.boxes[1].isMarked"><img src="@/assets/bookmark_red.png" width ="30" height = "30"></button>
+          <bookmark style="display:inline"></bookmark>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
         </td>
     </tr>
@@ -57,8 +55,7 @@
         </td>
         
         <td width = "130"><centre>
-          <button  @click="bookmark(2)" v-show="!this.boxes[2].isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
-          <button  @click="bookmark(2)" v-show="this.boxes[2].isMarked"><img src="@/assets/bookmark_red.png" width ="30" height = "30"></button>
+          <bookmark style="display:inline"></bookmark>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
         </td>
     </tr>
@@ -73,8 +70,7 @@
         </td>
         
         <td width = "130"><centre>
-          <button  @click="bookmark(3)" v-show="!this.boxes[3].isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
-          <button  @click="bookmark(3)" v-show="this.boxes[3].isMarked"><img src="@/assets/bookmark_red.png" width ="30" height = "30"></button>
+          <bookmark style="display:inline"></bookmark>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
         </td>
     </tr>
@@ -83,31 +79,24 @@
 
 </template>
 <script>
-
+import Bookmark from "./BookmarkButton.vue"
 export default {
-  name: 'button',
-  data() {
-    return {
-      boxes:
-      [
-        {isMarked: false},
-        {isMarked: false},
-        {isMarked: false},
-        {isMarked: false}
-      ]
+  name: 'topic',
+
+  components: {
+    'bookmark':Bookmark
   }
-  },
-  methods: {
-    bookmark(idx) {
-      this.boxes[idx].isMarked = !this.boxes[idx].isMarked;
-    }
-    //  clearUpdate() {
-    //   document.getElementById('update-button').className = "hidden"
-    // },
-    // myFunction() {
-    //   document.getElementById("myDropdown").classList.toggle("show");
-    // }
-  }
+  // methods: {
+  //   bookmark(idx) {
+  //     this.boxes[idx].isMarked = !this.boxes[idx].isMarked;
+  //   }
+  //   //  clearUpdate() {
+  //   //   document.getElementById('update-button').className = "hidden"
+  //   // },
+  //   // myFunction() {
+  //   //   document.getElementById("myDropdown").classList.toggle("show");
+  //   // }
+  // }
 }
 </script>
 

@@ -1,11 +1,10 @@
 <template>
 <div>
+
     <div class="navbar">
-      
       <a><router-link to="/all" exact>All</router-link></a>
-      <a><router-link to= "/latest" exact>Latest</router-link></a>
+      <a><router-link to="/latest" exact>Latest</router-link></a>
     </div>
-    
     <centre>
     <div id="head">
         <div class="question"> Question:
@@ -16,7 +15,7 @@
 
     <table>
         <tr>
-            <th width: 50px>Date</th>
+            <th style ="width: 50px">Date</th>
             <th>Answers</th>
             </tr>
         <tr>
@@ -79,9 +78,9 @@ button{
     text-decoration: underline;
 }
 .question {
-    font-size: 18px;
+    font-size: 20px;
     font-weight:bold;
-    padding-right:100px
+    padding-left:130px;
 }
 .question .text {
     font-size: 18px;
@@ -89,11 +88,8 @@ button{
     white-space:pre
 }
 
-
-.hidden {display:none;}
-
 .navbar {
-  overflow: hidden;
+  overflow: visible;
   background-color: white;
   font-weight: bold;
 }
@@ -118,10 +114,10 @@ button{
 }
 
 #head {
-    padding-left:100px;
+    padding-left:90px;
     padding-right:40px;
     align-content: center;
-    padding-top:15px;
+    padding-top:80px;
     padding-bottom:15px;
     margin-bottom:0px;
 }
@@ -129,8 +125,7 @@ button{
 table {
     /* padding-left: 300px; */
     text-align:left;
-    margin-left:100px;
-    margin-right:100px;
+    margin-left:220px;
     border: 1px solid #ddd;
     border-collapse: collapse;
 }
@@ -160,8 +155,9 @@ td {
   padding-top:20px;  */
   padding-left:340px;
   top: 5px;
+  left:20px;
   /* line-height:20px; */
-  position: relative;
+  position: sticky;
   /* left:800px; */
 }
 
