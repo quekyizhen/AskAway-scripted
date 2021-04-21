@@ -3,7 +3,7 @@
     <div class="navbar">
       <a href="#news">Sort by</a>
       <div class="drop">
-      <button class="dropbtn" @click="myFunction()">Add
+      <button class="dropbtn">Add
       </button>
       <div class="drop-content" id="myDropdown">
         <a href="#"> COVID-19</a>
@@ -11,7 +11,7 @@
         <a href="#"> Economy</a>
       </div>
       </div> 
-      <a href="#home">Bookmarks</a>
+      <router-link to="/bookmarks" exact>Bookmarks</router-link>
     </div>
 
     <table>
@@ -24,7 +24,7 @@
             <img id="update-button" src="@/assets/exclamation-mark.png" width="30" height="30" @click="clearUpdate()">
           <!-- x -->
           <div class="qn-list">
-            <p class="qn">Who is Obama?</p> <p class="date">Asked on 10/3/2021</p>
+            <p class="qn"><router-link to="/latest" exact>Who is Obama?</router-link></p> <p class="date">Asked on 10/3/2021</p>
           </div>
 
         <td>
@@ -71,10 +71,10 @@ export default {
     },
      clearUpdate() {
       document.getElementById('update-button').className = "hidden"
-    },
-    myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
     }
+    // myFunction() {
+    //   document.getElementById("myDropdown").classList.toggle("show");
+    // }
   }
 }
 </script>
@@ -159,10 +159,10 @@ input[type=checkbox] {
 
 .navbar a {
   float: right;
-  font-size: 16px;
+  font-size: 18px;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 16px;
   text-decoration: none;  
 
 }
@@ -174,11 +174,11 @@ input[type=checkbox] {
 
 .drop .dropbtn {
   cursor: pointer;
-  font-size: 16px;  
+  font-size: 18px;  
   border: none;
   outline: none;
   color: black;
-  padding: 14px 16px;
+  padding: 10px 16px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
@@ -188,6 +188,8 @@ input[type=checkbox] {
 .navbar a:hover, .drop:hover .dropbtn, .dropbtn:focus {
   background-color: #ddd;
 }
+
+.drop:hover .drop-content {display: block;}
 
 .drop-content {
   display: none;

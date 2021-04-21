@@ -94,7 +94,7 @@ input[type=text] {
 }
 
 #display-image {
-  padding-left: 300px;
+  padding-left: 220px;
   padding-right: 300px;
 }
 

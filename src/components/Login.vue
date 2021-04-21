@@ -9,7 +9,7 @@
   <label for="password">Password:</label><br>
   <input type="password" v-model="password" value="password" id="password"><br>
     <div id = "forgot"><router-link to="/forgot">Forgot Password?</router-link><br></div>
-    <button type="submit"><router-link to="/">Log In</router-link></button>
+    <button type="submit"><router-link class ="login" to="/">Log In</router-link></button>
     <ul v-if="errors.length">
       <li v-for="error in errors" :key="error">
         {{error}}
@@ -86,11 +86,25 @@ button {
 a {
   color:#2c3e50;
   font-weight:bold;
-  transition:0.5s
+  transition:0.5s;
+  
 }
 
 a:hover {
   color: #456a9b;
+  text-decoration: underline;
+  transition:0.5s;
+}
+
+.login {
+  color: white;
+  font-weight:bold;
+  transition:0.5s;
+  
+}
+
+.login:hover {
+  color:white;
   text-decoration: underline;
   transition:0.5s;
 }

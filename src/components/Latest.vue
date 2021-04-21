@@ -1,16 +1,16 @@
 <template>
 <div>
     <div class="navbar">
-      <a>All</a>
-      <a>Latest</a>
+      <a><router-link to="/all" exact>All</router-link></a>
+      <a><router-link to="/latest" exact>Latest</router-link></a>
     </div><centre>
     <div id="head">
         <div class="question"> Question:
-            <span></span>
+            <span id="space"></span>
             <div class="text" style="display:inline">Who is Obama?</div>
         </div> <br>
         <div class="question">Last Update: 
-            <span></span>   
+            <span id ="space"></span>   
             <div class="text" style="display:inline">01/04/2021</div>
         </div><br><br>
 
@@ -22,6 +22,7 @@
                         <div class="ansText" style="display:inline">
                             44th president of the United States
                         </div>
+                        <bookmark class="mark" style="display:inline"></bookmark>
                     </div>
 
                 <div class="ans">
@@ -29,9 +30,60 @@
                         </div>
                     <div class="ansText" style="display:inline">
                             Barack Hussein Obama II is an American politician and attorney 
-                            who served as the 44th president of the United States from 2009 to 2017.
+                            who served as the <span style="background-color:#ffffd5;font-weight:bold">44th president of the United States </span> from 2009 to 2017.
                             A member of the Democratic Party, Obama was the first African-American president 
                             of the United States.
+                        </div>
+                </div>
+
+                <div class="ans">
+                    <div class="ansTitle"> Answer 2:
+                        </div>
+                        <div class="ansText" style="display:inline">
+                            ...
+                        </div>
+                        <bookmark class="mark" style="display:inline"></bookmark>
+                    </div>
+
+                <div class="ans">
+                    <div class="ansTitle"> Context 2:
+                        </div>
+                    <div class="ansText" style="display:inline">
+                            ...
+                        </div>
+                </div>
+
+                <div class="ans">
+                    <div class="ansTitle"> Answer 3:
+                        </div>
+                        <div class="ansText" style="display:inline">
+                            ...
+                        </div>
+                        <bookmark class="mark" style="display:inline"></bookmark>
+                    </div>
+
+                <div class="ans">
+                    <div class="ansTitle"> Context 3:
+                        </div>
+                    <div class="ansText" style="display:inline">
+                            ...
+                        </div>
+                </div>
+
+                <div class="ans">
+                    <div class="ansTitle"> Answer 4:
+                        </div>
+                        <div class="ansText" style="display:inline">
+                            ...
+                        </div>
+                        <bookmark class="mark" style="display:inline"></bookmark>
+                    </div>
+
+                <div class="ans">
+                    <div class="ansTitle"> Context 4:
+                        </div>
+                    <div class="ansText" style="display:inline">
+                            ...
                         </div>
                 </div>
         </div>
@@ -41,22 +93,11 @@
 
 </template>
 <script>
-
+import Bookmark from "./BookmarkButton.vue"
 export default {
   name: 'Latest',
-  data() {
-    return {
-      boxes:
-      [
-        {isMarked: false},
-        {isMarked: false}
-      ]
-  }
-  },
-  methods: {
-    bookmark(idx) {
-      this.boxes[idx].isMarked = !this.boxes[idx].isMarked;
-    }
+  components: {
+    'bookmark':Bookmark
   }
 }
 </script>
@@ -106,7 +147,8 @@ input[type=checkbox] {
      display: flex;
      text-align: center;
      line-height: 40px;
-     margin-bottom: 20px
+     margin-bottom: 20px;
+     align-content: center;
     }
 .ansTitle {
     font-size: 17px;
@@ -121,6 +163,8 @@ input[type=checkbox] {
     font-weight:normal;
     margin-left:10px;
     text-align: left;
+    padding-top: 0px;
+    line-height: 40px;
 }
 
 .hidden {display:none;}
@@ -133,31 +177,31 @@ input[type=checkbox] {
 
 .navbar a {
   float: right;
-  font-size: 20px;
+  font-size: 18px;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 5px 16px;
   text-decoration: none;  
-
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
   background-color: #ddd;
 }
 
-span:before{
+#space:before{
     content:"       "; 
     display:inline-block; 
     width:20px;
 }
 
 #head {
-    margin-left:0px;
-    margin-right:0px;
     padding-left:100px;
     padding-right:40px;
     background-color: #f8f8ff;
     align-content: center;
+    padding-top:15px;
+    padding-bottom:15px;
+    margin-bottom:0px;
 }
 
 #title {
@@ -165,5 +209,13 @@ span:before{
     font-weight:bolder;
 }
 
+.ans .mark {
+  margin: 0px;
+  padding-top:4px; 
+  padding-left:340px;
+  line-height:20px;
+  position: absolute;
+  left:500px;
+}
 
 </style>
