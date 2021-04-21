@@ -6,7 +6,7 @@
       <button class="dropbtn" @click="myFunction()">Add
       </button>
       <div class="drop-content" id="myDropdown">
-        <a href="#"> COVID-19</a>
+        <router-link to= "/topics" exact> COVID-19</router-link>
         <a href="#"> Tourism</a>
         <a href="#"> Economy</a>
       </div>
@@ -157,7 +157,7 @@ input[type=checkbox] {
 
 .navbar a {
   float: right;
-  font-size: 16px;
+  font-size: 18px;
   color: black;
   text-align: center;
   padding: 14px 16px;
@@ -172,7 +172,7 @@ input[type=checkbox] {
 
 .drop .dropbtn {
   cursor: pointer;
-  font-size: 16px;  
+  font-size: 18px;  
   border: none;
   outline: none;
   color: black;
