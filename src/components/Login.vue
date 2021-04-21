@@ -9,7 +9,7 @@
   <label for="password">Password:</label><br>
   <input type="password" v-model="password" value="password" id="password"><br>
     <div id = "forgot"><router-link to="/forgot">Forgot Password?</router-link><br></div>
-    <button type="submit">Log In</button>
+    <button type="submit"><router-link to="/">Log In</router-link></button>
     <ul v-if="errors.length">
       <li v-for="error in errors" :key="error">
         {{error}}
