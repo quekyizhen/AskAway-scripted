@@ -59,7 +59,7 @@ export default {
 #login {
   padding-top:30px;
   padding-left: 450px;
-  padding-bottom: 50px;
+  padding-bottom: 0px;
 }
 input {
   padding:10px;
@@ -86,7 +86,7 @@ button {
 a {
   color:#2c3e50;
   font-weight:bold;
-  transition:0.5s;
+  transition:0.5s
 }
 
 a:hover {
@@ -103,6 +103,7 @@ h3 {
   display: inline-block;
   margin-top: 5px;
   margin-right:10px;
+  margin-bottom:0px
 }
 
 #forgot {
