@@ -34,8 +34,7 @@ export default {
   },
   data() {
     return {
-      signedIn: false,
-      // username: " to SafeTrack"
+      latest: true,
     }
   },
   methods: {

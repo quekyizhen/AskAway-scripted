@@ -23,10 +23,12 @@
             </tr>
         <tr>
             <td>
-                <p class="date"> 01/04/2021</p></td>
+                <p class="date"> 13/04/2021</p></td>
             <td> 
                 <div class="qn-list">
-                <p class="qn"><router-link to="/latest" exact>Mainly through close contact from person-to-person</router-link></p>
+
+                <p class="qn"><router-link to="/latest" exact>mainly through close contact from person-to-person</router-link></p>
+
                 </div> 
             </td>
                 <td style ="width: 30px">
@@ -41,8 +43,25 @@
             </td>
             <td>
                 <div class="qn-list">
-                <p class="qn"> Mainly from person-to-person through respiratory droplets produced when an infected person coughs, sneezes, or talks
-</p>
+
+                <p class="qn">mainly from person-to-person 
+                  through respiratory droplets produced when an infected person coughs, sneezes, or talks</p>
+                </div>
+                </td>
+
+                <td style ="width: 30px">
+                  <bookmark class="mark" style="display:inline"></bookmark>
+                  </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p class="date"> 30/03/2021</p>
+            </td>
+            <td>
+                <div class="qn-list">
+                <p class="qn">through small droplets from the nose or mouth</p>
+
                 </div>
                 </td>
 
