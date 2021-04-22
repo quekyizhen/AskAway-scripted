@@ -10,7 +10,7 @@
     <div id="head">
         <div class="question"> Question:
             <span id="space"></span>
-            <div class="text" style="display:inline">Who is Obama?</div>
+            <div class="text" style="display:inline">How does COVID-19 spread?</div>
             </div></div></centre>
          <br>
 
@@ -21,10 +21,10 @@
             </tr>
         <tr>
             <td>
-                <p class="date"> 01/04/2021</p></td>
+                <p class="date"> 13/04/2021</p></td>
             <td> 
                 <div class="qn-list">
-                <p class="qn"><router-link to="/latest" exact>44th president of the United States</router-link></p>
+                <p class="qn"><router-link to="/latest" exact>mainly through close contact from person-to-person</router-link></p>
                 </div> 
             </td>
                 <td style ="width: 30px">
@@ -40,7 +40,23 @@
             </td>
             <td>
                 <div class="qn-list">
-                <p class="qn">Ex president of the United States</p>
+                <p class="qn">mainly from person-to-person 
+                  through respiratory droplets produced when an infected person coughs, sneezes, or talks</p>
+                </div>
+                </td>
+
+                <td style ="width: 30px">
+                  <bookmark class="mark" style="display:inline"></bookmark>
+                  </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p class="date"> 30/03/2021</p>
+            </td>
+            <td>
+                <div class="qn-list">
+                <p class="qn">through small droplets from the nose or mouth</p>
                 </div>
                 </td>
 

@@ -7,11 +7,11 @@
     <div id="head">
         <div class="question"> Question:
             <span id="space"></span>
-            <div class="text" style="display:inline">Who is Obama?</div>
+            <div class="text" style="display:inline">How does COVID-19 spread?</div>
         </div> <br>
         <div class="question">Last Update: 
             <span id ="space"></span>   
-            <div class="text" style="display:inline">01/04/2021</div>
+            <div class="text" style="display:inline">13/04/2021</div>
         </div><br><br>
 
         <div id = "answers">
@@ -20,7 +20,7 @@
                     <div class="ansTitle"> Answer 1:
                         </div>
                         <div class="ansText" style="display:inline">
-                            44th president of the United States
+                            mainly through close contact from person-to-person
                         </div>
                         <bookmark class="mark" style="display:inline"></bookmark>
                     </div>
@@ -29,10 +29,11 @@
                     <div class="ansTitle"> Context 1:
                         </div>
                     <div class="ansText" style="display:inline">
-                            Barack Hussein Obama II is an American politician and attorney 
-                            who served as the <span style="background-color:#ffffd5;font-weight:bold">44th president of the United States </span> from 2009 to 2017.
-                            A member of the Democratic Party, Obama was the first African-American president 
-                            of the United States.
+                             drinking water. Water treatment plants use filters and disinfectants to remove or kill germs, like the virus that causes COVID-19. 
+                             The Environmental Protection Agency regulates water treatment plants to ensure that treated water is safe to drink.Currently,
+                              there is no evidence that the virus that causes COVID-19 can be spread to people by drinking treated water. 
+                              COVID-19 is spread <span style="background-color:#ffffd5;font-weight:bold">mainly through close contact from 
+                                  person-to-person</span>. You can continue to use and drink water from your tap as usual.
                         </div>
                 </div>
 
@@ -40,7 +41,7 @@
                     <div class="ansTitle"> Answer 2:
                         </div>
                         <div class="ansText" style="display:inline">
-                            ...
+                            mainly through close contact from person-to-person
                         </div>
                         <bookmark class="mark" style="display:inline"></bookmark>
                     </div>
@@ -49,7 +50,7 @@
                     <div class="ansTitle"> Context 2:
                         </div>
                     <div class="ansText" style="display:inline">
-                            ...
+                            drinking water. Water treatment plants use filters and disinfectants to remove or kill germs, like the virus that causes COVID-19. The Environmental Protection Agency regulates water treatment plants to ensure that treated water is safe to drink. Currently, there is no evidence that the virus that causes COVID-19 can be spread to people by drinking treated water. COVID-19 is spread <span style="background-color:#ffffd5;font-weight:bold">mainly through close contact from person-to-person</span>. You can continue to use and drink water from your tap as usual.
                         </div>
                 </div>
 
@@ -57,7 +58,7 @@
                     <div class="ansTitle"> Answer 3:
                         </div>
                         <div class="ansText" style="display:inline">
-                            ...
+                            mainly from person-to-person through respiratory droplets produced when an infected person coughs, sneezes, or talks
                         </div>
                         <bookmark class="mark" style="display:inline"></bookmark>
                     </div>
@@ -66,7 +67,7 @@
                     <div class="ansTitle"> Context 3:
                         </div>
                     <div class="ansText" style="display:inline">
-                            ...
+                            COVID-19 is a new disease and we are still learning how it spreads. The virus that causes COVID-19 is thought to spread <span style="background-color:#ffffd5;font-weight:bold">mainly from person-to-person through respiratory droplets produced when an infected person coughs, sneezes, or talks</span>. These droplets can land in the mouths or noses of people who are nearby or possibly be inhaled into the lungs. This type of spread is not a concern after death. It may be possible that a person can get COVID-19 by touching a surface or object that has the virus 
                         </div>
                 </div>
 
@@ -74,7 +75,7 @@
                     <div class="ansTitle"> Answer 4:
                         </div>
                         <div class="ansText" style="display:inline">
-                            ...
+                            through small droplets from the nose or mouth
                         </div>
                         <bookmark class="mark" style="display:inline"></bookmark>
                     </div>
@@ -83,7 +84,7 @@
                     <div class="ansTitle"> Context 4:
                         </div>
                     <div class="ansText" style="display:inline">
-                            ...
+                            People can catch COVID-19 from others who have the virus. The disease can spread from person   to person <span style="background-color:#ffffd5;font-weight:bold">through small droplets from the nose or mouth</span> are spread when a person with   COVID-19 coughs or exhales. These droplets land on objects and surfaces around the person.   Other people then catch COVID-19 by touching these objects or surfaces, then touching their   eyes, nose or mouth. People can also catch COVID-19 if they breathe in droplets from a person   with COVID-19 who coughs out
                         </div>
                 </div>
         </div>
@@ -156,7 +157,7 @@ input[type=checkbox] {
     padding-right:20px;
     padding-left: 10px;
     text-align:left;
-    white-space: nowrap
+    white-space: nowrap;
 }
 .ansText {
     font-size: 17px;
@@ -165,6 +166,7 @@ input[type=checkbox] {
     text-align: left;
     padding-top: 0px;
     line-height: 40px;
+    padding-right: 40px;
 }
 
 .hidden {display:none;}

@@ -22,22 +22,22 @@
 
         <!-- <img id="update-button" src="@/assets/exclamation-mark.png" width="30" height="30" @click="clearUpdate()"> -->
         <div class="qn-list">
-            <p class="qn"><router-link to="/latest" exact>Who is Obama?</router-link></p> <p class="date">Asked on 10/3/2021</p>
+            <p class="qn"><router-link to="/latest" exact>How does COVID-19 spread?</router-link></p> <p class="date">Asked on 10/3/2021</p>
         </div>
 
         <div class="ans">
           <span class="ansTitle"> Answer: </span>
           <span class="ansText">
-              44th president of the United States
+              mainly through close contact from person-to-person
           </span>
           <br>
           <span class="ansTitle"> Context:</span>
           <span class="ansText">
-                  Barack Hussein Obama II is an American politician and attorney 
-                  who served as the <span class="highlightedText">44th president of the United States </span>
-                  2009 to 2017.
-                  A member of the Democratic Party, Obama was the first African-American president 
-                  of the United States.
+                  drinking water. Water treatment plants use filters and disinfectants to remove or kill germs, like the virus that causes COVID-19. 
+                  The Environmental Protection Agency regulates water treatment plants to ensure that treated water is safe to drink.Currently,
+                  there is no evidence that the virus that causes COVID-19 can be spread to people by drinking treated water. 
+                  COVID-19 is spread <span class="highlightedText">mainly through close contact from 
+                  person-to-person</span>. You can continue to use and drink water from your tap as usual.
           </span>
         </div>
 
@@ -53,8 +53,42 @@
 
         <td>
           <div class="qn-list">
-            <p class="qn">Who is Donald Trump?</p> <p class="date">Asked on 1/3/2021</p>
+            <p class="qn">Who is Taylor Swift?</p> <p class="date">Asked on 1/3/2021</p>
           </div>
+        
+        <div class="ans">
+          <span class="ansTitle"> Answer: </span>
+          <span class="ansText">
+              American country singer-songwriter
+          </span>
+          <br>
+          <span class="ansTitle"> Context:</span>
+          <span class="ansText">
+            Speak Now is the third studio album by <span class="highlightedText">American country singer-songwriter</span> Taylor Swift. 
+            It was released on October 25, 2010, by Big Machine Records. Production for the album took place during 
+            2009 to 2010 at several recording studios, and was handled by Swift and Nathan Chapman. Written entirely by 
+            Swift as the follow-up to Fearless, Speak Now expands on the country pop style of her previous work, and 
+            features lyrical themes including love, romance and heartbreak.
+          </span>
+        </div>
+
+                <div class="ans">
+          <span class="ansTitle"> Answer: </span>
+          <span class="ansText">
+              American singer-songwriter
+          </span>
+          <br>
+          <span class="ansTitle"> Context:</span>
+          <span class="ansText">
+            Mine  is a song performed by <span class="highlightedText">American singer-songwriter Taylor Swift</span>. The song was written by
+             Taylor Swift alone and produced by Swift along with Nathan Chapman. It was released as the lead 
+             single from Swift's third studio album, Speak Now (2010) by Big Machine Records.Following an 
+             unauthorized internet leak, the song was released on August 4, 2010, two weeks earlier than the 
+             intended release date.Swift was inspired to write Mine after reflecting on one of her unnamed 
+             crushes and explained that 
+          </span>
+        </div>
+        </td>
         <td width = "130"><centre>
           <button  @click="bookmark(1)" v-show="!this.boxes[1].isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
           <button  @click="bookmark(1)" v-show="this.boxes[1].isMarked"><img src="@/assets/bookmark_red.png" width ="30" height = "30"></button>

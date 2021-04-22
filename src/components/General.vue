@@ -15,6 +15,21 @@
     </div>
 
     <table>
+    
+     <tr>
+        <td><input type="checkbox"></td>
+        <td>
+          <!-- <div class="qn-list"> -->
+            <p class="qn">Who is at higher risk for serious illness from covid?</p> <p class="date">Asked on 22/4/2021</p>
+          <!-- </div> -->
+        <td width = "130"><centre>
+
+          <bookmark style="display:inline"></bookmark>
+          <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
+
+        </td>
+    </tr>
+
     <tr>
         <td><input type="checkbox"></td>
 
@@ -22,19 +37,20 @@
           <!-- <button class="close-image"><img src="@/assets/exclamation-mark.png"></button> -->
           <!-- <router-link style="text-decoration: none;" to="/topics"> -->
             <router-link to="/latest"><img id="update-button" src="@/assets/exclamation-mark.png" width="30" height="30" @click="clearUpdate()"></router-link>
-          <div class="qn-list">
-            <p class="qn"><router-link to="/latest" exact>Who is Obama?</router-link></p> <p class="date">Asked on 10/3/2021</p>
-          </div>
+          <!-- <div class="qn-list"> -->
+            <p class="qn"><router-link to="/latest" exact>How does COVID-19 spread?</router-link></p> <p class="date">Asked on 10/3/2021</p>
+          <!-- </div> -->
         <td>
          <bookmark style="display:inline"></bookmark><button><img src="@/assets/garbage.png" width ="30" height = "30"></button>
         </td>
     </tr>
+
     <tr>
         <td><input type="checkbox"></td>
         <td>
-          <div class="qn-list">
-            <p class="qn">Who is Donald Trump?</p> <p class="date">Asked on 1/3/2021</p>
-          </div>
+          <!-- <div class="qn-list"> -->
+            <p class="qn">Who is Taylor Swift?</p> <p class="date">Asked on 1/3/2021</p>
+          <!-- </div> -->
         <td width = "130"><centre>
 
           <bookmark style="display:inline"></bookmark>
@@ -65,7 +81,8 @@ export default {
   // },
   components: {
     'bookmark':Bookmark
-  }
+  }, 
+  props:["latest",],
 }
 </script>
 
@@ -129,6 +146,8 @@ input[type=checkbox] {
     font-size: 20px;
     text-decoration: underline;
     font-weight:bold;
+    display: inline-block;
+    margin-bottom: 0em ;
 }
 
 .date {
@@ -136,7 +155,7 @@ input[type=checkbox] {
 }
 
 #update-button {
-  padding-bottom: 10px;
+  padding-right: 10px;
 }
 
 .hidden {display:none;}
