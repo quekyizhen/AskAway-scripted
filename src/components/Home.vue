@@ -27,28 +27,46 @@
         <div class="ans">
         Answer 1: older adults and people with underlying medical conditions
         <br><br>
-        Context 1: COVID-19 is a new disease and there is limited information regarding risk factors for severe disease. Based on currently available information and clinical expertise, <span class="highlightedText">older adults and people with underlying medical conditions</span> are at higher risk for severe illness from COVID-19.
+        Context 1: COVID-19 is a new disease and there is limited information regarding risk factors 
+        for severe disease. Based on currently available information and clinical expertise, 
+        <span class="highlightedText">older adults and people with underlying medical conditions</span> 
+        are at higher risk for severe illness from COVID-19.
         <br><br></div>
         <div class="space"></div>
         
         <div class="ans">
         Answer 2: Older people and people of all ages with severe underlying health conditions
         <br><br>
-        Context 2:  on it and then touching their own mouth, nose, or possibly their eyes. This is not thought to be the main way the virus spreads. People should consider not touching the body of someone who has died of COVID-19. <span class="highlightedText">Older people and people of all ages with severe underlying health conditions</span> are at higher risk of severe illness from COVID-19. There may be less of a chance of the virus spreading from certain types of touching, such as holding the hand or hugging after the body has been prepared for v
+        Context 2:  on it and then touching their own mouth, nose, or possibly their eyes. 
+        This is not thought to be the main way the virus spreads. People should consider not touching the 
+        body of someone who has died of COVID-19. <span class="highlightedText">Older people and people of 
+          all ages with severe underlying health conditions</span> are at higher risk of severe illness from 
+          COVID-19. There may be less of a chance of the virus spreading from certain types of touching, 
+          such as holding the hand or hugging after the body has been prepared for v
         <br><br></div>
         <div class="space"></div>
 
         <div class="ans">
         Answer 3: Older adults
         <br><br>
-        Context 3: <span class="highlightedText">Older adults</span> people who have serious underlying medical conditions are at highest risk of getting sick from COVID-19. If others in your home are at higher risk for severe illness from COVID-19, consider extra precautions to separate your child from those people. If you are unable to stay home with your child during school dismissals and someone at higher risk for severe illness from COVID-19 will be providing care (older adult or someone with a serious underlying medical condition), limit yo
+        Context 3: <span class="highlightedText">Older adults</span> people who have serious underlying
+         medical conditions are at highest risk of getting sick from COVID-19. If others in your home are
+          at higher risk for severe illness from COVID-19, consider extra precautions to separate your 
+          child from those people. If you are unable to stay home with your child during school dismissals 
+          and someone at higher risk for severe illness from COVID-19 will be providing care (older adult or 
+          someone with a serious underlying medical condition), limit yo
         <br><br></div>
         <div class="space"></div>
 
         <div class="ans">
         Answer 4: patients with cancer
         <br><br>
-        Context 4: We read the excellent Comment by Wenhua Liang and colleagues in The Lancet Oncology with great interest. Of 1590 cases with confirmed coronavirus disease 2019 (COVID-19), 18 patients had a history of cancer. The authors concluded that <span class="highlightedText">patients with cancer</span>had a higher risk of COVID-19 and with a poorer prognosis than those without cancer. First, the data in the Comment by Liang and colleagues showed a higher percentage of patients with cancer in the COVID-19 cohort than in the overall populati
+        Context 4: We read the excellent Comment by Wenhua Liang and colleagues in The Lancet Oncology 
+        with great interest. Of 1590 cases with confirmed coronavirus disease 2019 (COVID-19), 18 patients 
+        had a history of cancer. The authors concluded that <span class="highlightedText">patients with cancer
+          </span> had a higher risk of COVID-19 and with a poorer prognosis than those without cancer. First, 
+          the data in the Comment by Liang and colleagues showed a higher percentage of patients with cancer in 
+          the COVID-19 cohort than in the overall populati
         <br><br></div>
     
 
