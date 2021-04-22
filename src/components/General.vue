@@ -24,7 +24,7 @@
           <!-- </div> -->
         <td width = "130"><centre>
 
-          <bookmark style="display:inline"></bookmark>
+          <changing style="display:inline"></changing>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
 
         </td>
@@ -41,7 +41,7 @@
           <!-- </div> -->
 
         <td>
-         <keep-alive><changing @changeBookmark="change" style="display:inline" v-show="this.red"></changing></keep-alive>
+         <keep-alive><changing @changeBookmark="change" style="display:inline" v-show="!this.isMarked"></changing></keep-alive>
          <bookmarkRed style="display:inline" v-show="this.isMarked"></bookmarkRed><button>
           <img src="@/assets/garbage.png" width ="30" height = "30"></button>
         </td>
