@@ -5,13 +5,15 @@
       <a><router-link to="/all" exact>All</router-link></a>
       <a><router-link to="/latest" exact>Latest</router-link></a>
     </div>
-    <div id ="table">
-    <centre>
+
+    <!-- <div id="header"> -->
+    <!-- <centre> -->
+    <div id ="content">
     <div id="head">
         <div class="question"> Question:
             <span id="space"></span>
             <div class="text" style="display:inline">How does COVID-19 spread?</div>
-            </div></div></centre>
+            </div></div>
          <br>
 
     <table>
@@ -24,22 +26,24 @@
                 <p class="date"> 13/04/2021</p></td>
             <td> 
                 <div class="qn-list">
+
                 <p class="qn"><router-link to="/latest" exact>mainly through close contact from person-to-person</router-link></p>
+
                 </div> 
             </td>
                 <td style ="width: 30px">
-                  <bookmark class="mark" style="display:inline"></bookmark>
+                  <bookmarkRed class="mark" style="display:inline"></bookmarkRed>
                 </td>
             
         </tr>
-        
-
+      
         <tr>
             <td>
                 <p class="date"> 30/03/2021</p>
             </td>
             <td>
                 <div class="qn-list">
+
                 <p class="qn">mainly from person-to-person 
                   through respiratory droplets produced when an infected person coughs, sneezes, or talks</p>
                 </div>
@@ -57,6 +61,7 @@
             <td>
                 <div class="qn-list">
                 <p class="qn">through small droplets from the nose or mouth</p>
+
                 </div>
                 </td>
 
@@ -65,18 +70,38 @@
                   </td>
         </tr>
 
+        <tr>
+            <td>
+                <p class="date"> 30/03/2021</p>
+            </td>
+            <td>
+                <div class="qn-list">
+                <p class="qn">
+                Through small droplets from the nose or mouth
+                </p>
+                </div>
+                </td>
+                <td style ="width: 30px">
+                  <bookmark class="mark" style="display:inline"></bookmark>
+                  </td>
+        </tr>
+
     </table>
+    <!-- </div> -->
 </div>
+    <!-- </centre> -->
 </div>
 
 </template>
 
 <script>
 import Bookmark from "./BookmarkButton.vue"
+import BookmarkRed from "./BookmarkButtonRed.vue"
 export default {
   name: 'All',
   components: {
-    'bookmark':Bookmark
+    'bookmark':Bookmark,
+    'bookmarkRed': BookmarkRed
   }
 }
 </script>
@@ -116,7 +141,7 @@ button{
 }
 
 .navbar {
-  overflow: visible;
+  overflow: hidden;
   background-color: white;
   font-weight: bold;
 }
@@ -129,6 +154,7 @@ button{
   padding: 5px 16px;
   text-decoration: none;  
 }
+
 
 .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
   background-color: #ddd;
@@ -144,7 +170,7 @@ button{
     padding-left:90px;
     padding-right:40px;
     align-content: center;
-    padding-top:80px;
+    padding-top:15px;
     padding-bottom:15px;
     margin-bottom:0px;
 }
@@ -167,7 +193,7 @@ th {
     border: 1px solid #ddd;
 }
 
-tr:nth-child(odd){background-color: #f8f8ff}
+tr{background-color: white}
 
 td {
   text-align: left;
@@ -186,8 +212,13 @@ td:last-child {
   padding-right:20px;
 }
 
-#table {
-  margin-left: 20px;
+#content{
+  background-color: #f8f8ff;
+  align-content: center;
+  padding-bottom:400px;
 }
 
+/* #header {
+  background-color: #f8f8ff
+} */
 </style>

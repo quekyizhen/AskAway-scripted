@@ -34,26 +34,30 @@
         <td><input type="checkbox"></td>
 
         <td>
-          <!-- <button class="close-image"><img src="@/assets/exclamation-mark.png"></button> -->
-          <!-- <router-link style="text-decoration: none;" to="/topics"> -->
             <router-link to="/latest"><img id="update-button" src="@/assets/exclamation-mark.png" width="30" height="30" @click="clearUpdate()"></router-link>
+
           <!-- <div class="qn-list"> -->
             <p class="qn"><router-link to="/latest" exact>How does COVID-19 spread?</router-link></p> <p class="date">Asked on 10/3/2021</p>
           <!-- </div> -->
+
         <td>
-         <bookmark style="display:inline"></bookmark><button><img src="@/assets/garbage.png" width ="30" height = "30"></button>
+         <keep-alive><changing @changeBookmark="change" style="display:inline" v-show="this.red"></changing></keep-alive>
+         <bookmarkRed style="display:inline" v-show="this.isMarked"></bookmarkRed><button>
+          <img src="@/assets/garbage.png" width ="30" height = "30"></button>
         </td>
     </tr>
 
     <tr>
         <td><input type="checkbox"></td>
         <td>
+
           <!-- <div class="qn-list"> -->
             <p class="qn">Who is Taylor Swift?</p> <p class="date">Asked on 1/3/2021</p>
           <!-- </div> -->
+
         <td width = "130"><centre>
 
-          <bookmark style="display:inline"></bookmark>
+          <bookmarkRed style="display:inline"></bookmarkRed>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
 
         </td>
@@ -63,26 +67,27 @@
 
 </template>
 <script>
-import Bookmark from "./BookmarkButton.vue"
+import ChangingBookmark from "./ChangingBookmark.vue"
+import BookmarkRed from "./BookmarkButtonRed.vue"
 export default {
   
   name: 'general',
-
-  // methods: {
-  //   bookmark(idx) {
-  //     this.boxes[idx].isMarked = !this.boxes[idx].isMarked;
-  //   },
-  //    clearUpdate() {
-  //     document.getElementById('update-button').className = "hidden"
-  //   }
-  //   // myFunction() {
-  //   //   document.getElementById("myDropdown").classList.toggle("show");
-  //   // }
-  // },
+  data() {
+    return {
+        isMarked: false
+    }
+  },
+  methods: {
+    change() {
+      this.isMarked = !this.isMarked;
+      console.log("hello");
+    }
+  },
   components: {
-    'bookmark':Bookmark
-  }, 
-  props:["latest",],
+    'changing':ChangingBookmark,
+    'bookmarkRed':BookmarkRed
+  }
+
 }
 </script>
 
@@ -93,6 +98,10 @@ button{
   background: none;
   cursor: pointer;
   padding-left: 25px
+}
+
+p{
+  margin:10px
 }
 
 /* Style the tab */
@@ -119,6 +128,7 @@ table {
     width:100%;
     /* padding-left: 300px; */
     text-align:left;
+    margin-bottom: 239px;
 }
 th, td {
   padding-left: 20px;

@@ -25,25 +25,27 @@
             <p class="qn"><router-link to="/latest" exact>How does COVID-19 spread?</router-link></p> <p class="date">Asked on 10/3/2021</p>
         </div>
 
-        <div class="ans">
+        <span class="ans">
           <span class="ansTitle"> Answer: </span>
           <span class="ansText">
+          
               mainly through close contact from person-to-person
-          </span>
-          <br>
-          <span class="ansTitle"> Context:</span>
-          <span class="ansText">
+          </span> </span>
+          
+          <span class="ans">
+          <div class="ansTitle"> Context:</div>
+          <div class="ansText" style="display:inline">
                   drinking water. Water treatment plants use filters and disinfectants to remove or kill germs, like the virus that causes COVID-19. 
                   The Environmental Protection Agency regulates water treatment plants to ensure that treated water is safe to drink.Currently,
                   there is no evidence that the virus that causes COVID-19 can be spread to people by drinking treated water. 
                   COVID-19 is spread <span class="highlightedText">mainly through close contact from 
                   person-to-person</span>. You can continue to use and drink water from your tap as usual.
+
+          </div>
           </span>
-        </div>
 
         <td>
-          <button @click="bookmark(0)" v-show="!this.boxes[0].isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
-          <button @click="bookmark(0)" v-show="this.boxes[0].isMarked"><img src="@/assets/bookmark_red.png" width ="30" height = "30"></button>
+          <bookmarkRed style="display:inline"></bookmarkRed>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button>
 
         </td>
@@ -90,8 +92,7 @@
         </div>
         </td>
         <td width = "130"><centre>
-          <button  @click="bookmark(1)" v-show="!this.boxes[1].isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
-          <button  @click="bookmark(1)" v-show="this.boxes[1].isMarked"><img src="@/assets/bookmark_red.png" width ="30" height = "30"></button>
+          <bookmarkRed style="display:inline"></bookmarkRed>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
 
         </td>
@@ -101,30 +102,14 @@
 
 </template>
 <script>
-
+import BookmarkRed from "./BookmarkButtonRed.vue"
 export default {
-  name: 'button',
-  data() {
-    return {
-      boxes:
-      [
-        {isMarked: false},
-        {isMarked: false}
-      ]
-  }
-  },
-  methods: {
-    bookmark(idx) {
-      this.boxes[idx].isMarked = !this.boxes[idx].isMarked;
-    }
-    //  clearUpdate() {
-    //   document.getElementById('update-button').className = "hidden"
-    // },
-    // myFunction() {
-    //   document.getElementById("myDropdown").classList.toggle("show");
-    // }
+  name: 'Bookmarks',
+  components: {
+    'bookmarkRed': BookmarkRed
   }
 }
+
 </script>
 
 <style scoped>
@@ -133,9 +118,12 @@ button{
   border: none;
   background: none;
   cursor: pointer;
-  padding-left: 25px
+  padding-left: 25px;
 }
 
+p{
+  margin:5px
+}
 /* Style the tab */
 .tab {
   overflow: hidden;
@@ -163,6 +151,7 @@ table {
 th, td {
   padding-left: 20px;
   text-align: left;
+  align-content: center;
 }
 
 tr:nth-child(even) {
@@ -191,21 +180,23 @@ input[type=checkbox] {
 .date {
     font-size: 13px;
 }
-
 .ans{
+    color: #020202;
+    /* width:900px; */
     height:fit-content;
-    padding-left: 10px;
-    text-align: left;
+    padding-left: 20px;
+    display: flex;
+    text-align: center;
     line-height: 30px;
-    margin-bottom: 20px;
-    padding-right: 30px;
-    display: inline-block;
+    margin: 0px;
+    padding-right:10px;
+    align-content: center;
   }
 .ansTitle {
     font-size: 17px;
     font-weight:bold;
     padding-right:20px;
-    padding-left: 20px;
+    padding-left: 10px;
     text-align:left;
     white-space: nowrap
 }
@@ -214,6 +205,8 @@ input[type=checkbox] {
     font-weight:normal;
     margin-left:10px;
     text-align: left;
+    padding-top: 0px;
+    line-height: 35px;
 }
 
 .highlightedText {

@@ -12,7 +12,7 @@ export default {
   name: 'button',
   data() {
     return {
-        isMarked: false
+        isMarked: true
   }
   },
   methods: {

@@ -20,9 +20,11 @@
                     <div class="ansTitle"> Answer 1:
                         </div>
                         <div class="ansText" style="display:inline">
+
                             mainly through close contact from person-to-person
                         </div>
-                        <bookmark class="mark" style="display:inline"></bookmark>
+                        <keep-alive>
+                        <changing class="mark" style="display:inline"></changing></keep-alive>
                     </div>
 
                 <div class="ans">
@@ -95,10 +97,12 @@
 </template>
 <script>
 import Bookmark from "./BookmarkButton.vue"
+import Changing from "./ChangingBookmark.vue"
 export default {
   name: 'Latest',
   components: {
-    'bookmark':Bookmark
+    'bookmark':Bookmark,
+    'changing': Changing
   }
 }
 </script>
@@ -197,7 +201,7 @@ input[type=checkbox] {
 }
 
 #head {
-    padding-left:100px;
+    padding-left:250px;
     padding-right:40px;
     background-color: #f8f8ff;
     align-content: center;
@@ -217,7 +221,7 @@ input[type=checkbox] {
   padding-left:340px;
   line-height:20px;
   position: absolute;
-  left:500px;
+  left:645px;
 }
 
 </style>
