@@ -36,7 +36,7 @@
 
         <td>
           <div class="qn-list">
-            <p class="qn">How does COVID-19 spread?</p> <p class="date">Asked on 10/3/2021</p>
+            <p class="qn"><router-link to= "/latest" exact>How does COVID-19 spread?</router-link></p> <p class="date">Asked on 10/3/2021</p>
           </div>
         </td>
         <td width = "130"><centre>
