@@ -1,7 +1,7 @@
 <template>
 <div>
-          <button @click="bookmark()" v-show="!this.isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
-          <button @click="bookmark()" v-show="this.isMarked"><img src="@/assets/bookmark_red.png" width ="30" height = "30"></button>
+          <button @click="bookmark(); change()" v-show="!this.red"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
+          <button @click="bookmark()" v-show="this.red"><img src="@/assets/bookmark_red.png" width ="30" height = "30"></button>
 
 </div>
 
@@ -18,6 +18,9 @@ export default {
   methods: {
     bookmark() {
       this.isMarked = !this.isMarked;
+    },
+    change() {
+        this.red = !this.red
     }
   }
 }

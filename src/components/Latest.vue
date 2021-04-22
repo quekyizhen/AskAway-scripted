@@ -7,7 +7,7 @@
     <div id="head">
         <div class="question"> Question:
             <span id="space"></span>
-            <div class="text" style="display:inline">Who is Obama?</div>
+            <div class="text" style="display:inline">How does COVID-19 spread?</div>
         </div> <br>
         <div class="question">Last Update: 
             <span id ="space"></span>   
@@ -20,19 +20,20 @@
                     <div class="ansTitle"> Answer 1:
                         </div>
                         <div class="ansText" style="display:inline">
-                            44th president of the United States
+                            Mainly through close contact from person-to-person
                         </div>
-                        <bookmark class="mark" style="display:inline"></bookmark>
+                        <keep-alive>
+                        <changing class="mark" style="display:inline"></changing></keep-alive>
                     </div>
 
                 <div class="ans">
                     <div class="ansTitle"> Context 1:
                         </div>
                     <div class="ansText" style="display:inline">
-                            Barack Hussein Obama II is an American politician and attorney 
-                            who served as the <span style="background-color:#ffffd5;font-weight:bold">44th president of the United States </span> from 2009 to 2017.
-                            A member of the Democratic Party, Obama was the first African-American president 
-                            of the United States.
+                            ple by drinking treated water. COVID-19 is spread
+                            <span style="background-color:#ffffd5;font-weight:bold">
+                            mainly through close contact from person-to-person.</span>
+                            You can continue to use and drink water from you
                         </div>
                 </div>
 
@@ -94,10 +95,12 @@
 </template>
 <script>
 import Bookmark from "./BookmarkButton.vue"
+import Changing from "./ChangingBookmark.vue"
 export default {
   name: 'Latest',
   components: {
-    'bookmark':Bookmark
+    'bookmark':Bookmark,
+    'changing': Changing
   }
 }
 </script>
@@ -195,7 +198,7 @@ input[type=checkbox] {
 }
 
 #head {
-    padding-left:100px;
+    padding-left:250px;
     padding-right:40px;
     background-color: #f8f8ff;
     align-content: center;
@@ -215,7 +218,7 @@ input[type=checkbox] {
   padding-left:340px;
   line-height:20px;
   position: absolute;
-  left:500px;
+  left:645px;
 }
 
 </style>

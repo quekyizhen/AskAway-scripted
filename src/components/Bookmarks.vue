@@ -23,27 +23,26 @@
         <!-- <img id="update-button" src="@/assets/exclamation-mark.png" width="30" height="30" @click="clearUpdate()"> -->
         <div class="qn-list">
             <p class="qn"><router-link to="/latest" exact>Who is Obama?</router-link></p> <p class="date">Asked on 10/3/2021</p>
-        </div>
+        </div><br>
 
-        <div class="ans">
+        <span class="ans">
           <span class="ansTitle"> Answer: </span>
           <span class="ansText">
               44th president of the United States
-          </span>
-          <br>
-          <span class="ansTitle"> Context:</span>
-          <span class="ansText">
+          </span> </span>
+
+          <span class="ans">
+          <div class="ansTitle"> Context:</div>
+          <div class="ansText" style="display:inline">
                   Barack Hussein Obama II is an American politician and attorney 
                   who served as the <span class="highlightedText">44th president of the United States </span>
-                  2009 to 2017.
-                  A member of the Democratic Party, Obama was the first African-American president 
+                  2009 to 2017. A member of the Democratic Party, Obama was the first African-American president 
                   of the United States.
+          </div>
           </span>
-        </div>
 
         <td>
-          <button @click="bookmark(0)" v-show="!this.boxes[0].isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
-          <button @click="bookmark(0)" v-show="this.boxes[0].isMarked"><img src="@/assets/bookmark_red.png" width ="30" height = "30"></button>
+          <bookmarkRed style="display:inline"></bookmarkRed>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button>
 
         </td>
@@ -56,8 +55,7 @@
             <p class="qn">Who is Donald Trump?</p> <p class="date">Asked on 1/3/2021</p>
           </div>
         <td width = "130"><centre>
-          <button  @click="bookmark(1)" v-show="!this.boxes[1].isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
-          <button  @click="bookmark(1)" v-show="this.boxes[1].isMarked"><img src="@/assets/bookmark_red.png" width ="30" height = "30"></button>
+          <bookmarkRed style="display:inline"></bookmarkRed>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
 
         </td>
@@ -67,30 +65,14 @@
 
 </template>
 <script>
-
+import BookmarkRed from "./BookmarkButtonRed.vue"
 export default {
-  name: 'button',
-  data() {
-    return {
-      boxes:
-      [
-        {isMarked: false},
-        {isMarked: false}
-      ]
-  }
-  },
-  methods: {
-    bookmark(idx) {
-      this.boxes[idx].isMarked = !this.boxes[idx].isMarked;
-    }
-    //  clearUpdate() {
-    //   document.getElementById('update-button').className = "hidden"
-    // },
-    // myFunction() {
-    //   document.getElementById("myDropdown").classList.toggle("show");
-    // }
+  name: 'Bookmarks',
+  components: {
+    'bookmarkRed': BookmarkRed
   }
 }
+
 </script>
 
 <style scoped>
@@ -99,9 +81,12 @@ button{
   border: none;
   background: none;
   cursor: pointer;
-  padding-left: 25px
+  padding-left: 25px;
 }
 
+p{
+  margin:5px
+}
 /* Style the tab */
 .tab {
   overflow: hidden;
@@ -129,6 +114,7 @@ table {
 th, td {
   padding-left: 20px;
   text-align: left;
+  align-content: center;
 }
 
 tr:nth-child(even) {
@@ -157,21 +143,23 @@ input[type=checkbox] {
 .date {
     font-size: 13px;
 }
-
 .ans{
+    color: #020202;
+    /* width:900px; */
     height:fit-content;
-    padding-left: 10px;
-    text-align: left;
+    padding-left: 20px;
+    display: flex;
+    text-align: center;
     line-height: 30px;
-    margin-bottom: 20px;
-    padding-right: 30px;
-    display: inline-block;
+    margin: 0px;
+    padding-right:10px;
+    align-content: center;
   }
 .ansTitle {
     font-size: 17px;
     font-weight:bold;
     padding-right:20px;
-    padding-left: 20px;
+    padding-left: 10px;
     text-align:left;
     white-space: nowrap
 }
@@ -180,6 +168,8 @@ input[type=checkbox] {
     font-weight:normal;
     margin-left:10px;
     text-align: left;
+    padding-top: 0px;
+    line-height: 35px;
 }
 
 .highlightedText {

@@ -26,7 +26,7 @@
         </td>
 
         <td>
-          <bookmark style="display:inline"></bookmark>
+          <bookmarkRed style="display:inline"></bookmarkRed>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button>
 
         </td>
@@ -55,7 +55,7 @@
         </td>
         
         <td width = "130"><centre>
-          <bookmark style="display:inline"></bookmark>
+          <bookmarkRed style="display:inline"></bookmarkRed>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
         </td>
     </tr>
@@ -80,23 +80,14 @@
 </template>
 <script>
 import Bookmark from "./BookmarkButton.vue"
+import BookmarkRed from "./BookmarkButtonRed.vue"
 export default {
   name: 'topic',
 
   components: {
-    'bookmark':Bookmark
+    'bookmark':Bookmark,
+    'bookmarkRed': BookmarkRed
   }
-  // methods: {
-  //   bookmark(idx) {
-  //     this.boxes[idx].isMarked = !this.boxes[idx].isMarked;
-  //   }
-  //   //  clearUpdate() {
-  //   //   document.getElementById('update-button').className = "hidden"
-  //   // },
-  //   // myFunction() {
-  //   //   document.getElementById("myDropdown").classList.toggle("show");
-  //   // }
-  // }
 }
 </script>
 
@@ -107,6 +98,10 @@ button{
   background: none;
   cursor: pointer;
   padding-left: 25px
+}
+
+p {
+  margin:10px
 }
 
 /* Style the tab */
@@ -160,6 +155,7 @@ input[type=checkbox] {
     font-size: 20px;
     text-decoration: underline;
     font-weight:bold;
+    cursor: pointer;
 }
 
 .date {
