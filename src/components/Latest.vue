@@ -157,7 +157,7 @@ input[type=checkbox] {
     padding-right:20px;
     padding-left: 10px;
     text-align:left;
-    white-space: nowrap
+    white-space: nowrap;
 }
 .ansText {
     font-size: 17px;
@@ -166,6 +166,7 @@ input[type=checkbox] {
     text-align: left;
     padding-top: 0px;
     line-height: 40px;
+    padding-right: 40px;
 }
 
 .hidden {display:none;}

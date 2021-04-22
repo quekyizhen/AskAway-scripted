@@ -15,6 +15,21 @@
     </div>
 
     <table>
+    
+     <tr>
+        <td><input type="checkbox"></td>
+        <td>
+          <!-- <div class="qn-list"> -->
+            <p class="qn">Who is at higher risk for serious illness from covid?</p> <p class="date">Asked on 22/4/2021</p>
+          <!-- </div> -->
+        <td width = "130"><centre>
+
+          <bookmark style="display:inline"></bookmark>
+          <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
+
+        </td>
+    </tr>
+
     <tr>
         <td><input type="checkbox"></td>
 
@@ -29,6 +44,7 @@
          <bookmark style="display:inline"></bookmark><button><img src="@/assets/garbage.png" width ="30" height = "30"></button>
         </td>
     </tr>
+
     <tr>
         <td><input type="checkbox"></td>
         <td>

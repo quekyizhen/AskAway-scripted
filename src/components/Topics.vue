@@ -21,7 +21,7 @@
         <td>
           <!-- <img id="update-button" src="@/assets/exclamation-mark.png" width="30" height="30" @click="clearUpdate()"> -->
           <div class="qn-list">
-            <p class="qn"><router-link to="/latest" exact>Who is at higher risk for serious illness from covid?</router-link></p> <p class="date">Asked on 10/3/2021</p>
+            <p class="qn"><router-link to="/latest" exact>Who is at higher risk for serious illness from covid?</router-link></p> <p class="date">Asked on 22/4/2021</p>
           </div>
         </td>
 
@@ -36,7 +36,7 @@
 
         <td>
           <div class="qn-list">
-            <p class="qn">How does COVID-19 spread?</p> <p class="date">Asked on 1/3/2021</p>
+            <p class="qn">How does COVID-19 spread?</p> <p class="date">Asked on 10/3/2021</p>
           </div>
         </td>
         <td width = "130"><centre>
