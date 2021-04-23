@@ -26,7 +26,7 @@
         </td>
 
         <td>
-          <bookmarkRed style="display:inline"></bookmarkRed>
+          <bookmark style="display:inline"></bookmark>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button>
 
         </td>
@@ -40,7 +40,7 @@
           </div>
         </td>
         <td width = "130"><centre>
-          <bookmark style="display:inline"></bookmark>
+          <changing style="display:inline"></changing>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
         </td>
     </tr>
@@ -55,7 +55,7 @@
         </td>
         
         <td width = "130"><centre>
-          <bookmarkRed style="display:inline"></bookmarkRed>
+          <bookmark style="display:inline"></bookmark>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
         </td>
     </tr>
@@ -70,7 +70,7 @@
         </td>
         
         <td width = "130"><centre>
-          <bookmark style="display:inline"></bookmark>
+          <bookmarkRed style="display:inline"></bookmarkRed>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
         </td>
     </tr>
@@ -81,12 +81,14 @@
 <script>
 import Bookmark from "./BookmarkButton.vue"
 import BookmarkRed from "./BookmarkButtonRed.vue"
+import Changing from "./ChangingBookmark.vue"
 export default {
   name: 'topic',
 
   components: {
     'bookmark':Bookmark,
-    'bookmarkRed': BookmarkRed
+    'bookmarkRed': BookmarkRed,
+    'changing': Changing
   }
 }
 </script>
@@ -123,11 +125,10 @@ p {
 
 }
 
-
 table {
     width:100%;
-    /* padding-left: 300px; */
     text-align:left;
+    margin-bottom: 58px;
 }
 th, td {
   padding-left: 20px;

@@ -23,8 +23,8 @@
 
                             mainly through close contact from person-to-person
                         </div>
-                        <keep-alive>
-                        <changing class="mark" style="display:inline"></changing></keep-alive>
+
+                        <changing class="mark" style="display:inline"></changing>
                     </div>
 
                 <div class="ans">

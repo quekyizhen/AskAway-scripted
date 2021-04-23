@@ -22,15 +22,17 @@
       <router-view @toggleSignIn="toggleSignIn" @toggleSignOut="toggleSignOut" :signedIn="signedIn"></router-view>
     </div>
 
-    <div id="copyright">&#169; Team A <sup>2</sup></div>
+    <!-- <div id="copyright">&#169; Team A <sup>2</sup></div> -->
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+import Footer from './components/Footer.vue'
 export default {
   name: 'App',
   components: {
-
+    Footer
   },
   data() {
     return {

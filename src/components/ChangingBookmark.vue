@@ -1,6 +1,6 @@
 <template>
 <div>
-          <button @click="bookmark(); change()" v-show="!this.isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
+          <button @click="bookmark()" v-show="!this.isMarked"><img src="@/assets/bookmark.png" width ="30" height = "30"></button>
           <button @click="bookmark()" v-show="this.isMarked"><img src="@/assets/bookmark_red.png" width ="30" height = "30"></button>
 
 </div>
@@ -12,15 +12,14 @@ export default {
   name: 'button',
   data() {
     return {
-        isMarked: false
+        isMarked: this.$store.getters.getMarked
   }
   },
   methods: {
     bookmark() {
-      this.isMarked = !this.isMarked;
-    },
-    change() {
-        this.red = !this.red
+      this.$store.commit("bookmark");
+      this.isMarked = this.$store.getters.getMarked;
+      console.log(this.isMarked);
     }
   }
 }

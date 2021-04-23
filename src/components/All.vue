@@ -70,22 +70,6 @@
                   </td>
         </tr>
 
-        <tr>
-            <td>
-                <p class="date"> 30/03/2021</p>
-            </td>
-            <td>
-                <div class="qn-list">
-                <p class="qn">
-                Through small droplets from the nose or mouth
-                </p>
-                </div>
-                </td>
-                <td style ="width: 30px">
-                  <bookmark class="mark" style="display:inline"></bookmark>
-                  </td>
-        </tr>
-
     </table>
     <!-- </div> -->
 </div>
@@ -215,7 +199,7 @@ td:last-child {
 #content{
   background-color: #f8f8ff;
   align-content: center;
-  padding-bottom:400px;
+  padding-bottom:50px;
 }
 
 /* #header {
