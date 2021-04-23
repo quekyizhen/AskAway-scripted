@@ -129,6 +129,7 @@ table {
     width:100%;
     text-align:left;
     margin-bottom: 58px;
+    border-collapse: collapse;
 }
 th, td {
   padding-left: 20px;
