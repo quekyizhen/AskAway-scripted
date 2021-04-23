@@ -199,7 +199,7 @@ td:last-child {
 #content{
   background-color: #f8f8ff;
   align-content: center;
-  padding-bottom:400px;
+  padding-bottom:50px;
 }
 
 /* #header {
