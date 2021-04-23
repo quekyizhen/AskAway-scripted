@@ -11,7 +11,7 @@
         <a href="#"> Economy</a>
       </div>
       </div> 
-      <router-link to="/bookmarks" exact>Bookmarks</router-link>
+      <a>Bookmarks</a>
     </div>
 
     <table>

@@ -19,7 +19,6 @@ export default new Router({
         {path:'/latest', name: "Latest", component:Latest},
         { path: '/topics', name: "Topics",component: Topics},
         { path: '/bookmarks', name: "Bookmarks",component: Bookmarks},
-
     { path: '/login', component: Login},
     { path: '/', name: "Home", component: Home},
     { path: '/register', name: "Register", component: Register},

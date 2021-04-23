@@ -2,8 +2,7 @@
   <div id="app">
     <div id="header">
       <h1><router-link to="/" exact><img src="@/assets/logo_name.png" width="245" height="53" alt="logo words"></router-link></h1>
-      <div v-if="signedIn" class="link"><router-link to="/profile" exact>My Profile</router-link></div>
-      <div v-else><div class="link"><router-link to="/login" exact>Login</router-link></div></div>
+      <div><div class="link"><router-link to="/login" exact>Login</router-link></div></div>
   
       <div class="dropdown">
         <a class="link">Topics</a>
@@ -21,25 +20,12 @@
     <div style="width:100%">
       <router-view @toggleSignIn="toggleSignIn" @toggleSignOut="toggleSignOut" :signedIn="signedIn"></router-view>
     </div>
-
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App',
-  methods: {
-    toggleSignIn(username) {
-      this.signedIn = true;
-      this.username = ", " + username;
-      this.$router.push("/");
-    },
-    toggleSignOut() {
-      this.signedIn = false;
-      // this.username = " to SafeTrack";
-    }, 
-  },
-
+  name: 'App'
 }
 </script>
 
