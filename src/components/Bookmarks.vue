@@ -90,7 +90,7 @@
             ontrol measures implemented since January 23, which include cutting off Wuhan and many other cities 
             and towns, a great public awareness and high level of self isolation at home, have contributed to a 
             substantial decline in the reproductivity of the COVID-19 in China. We predict that Hubei province 
-            will reach its peak between <span class="highlightedText">February 20 and 22, 2020</span>, and if the removal rate can be increased to 0.1, 
+            will reach its peak <span class="highlightedText"> between February 20 and 22, 2020</span>, and if the removal rate can be increased to 0.1, 
             the epidemic outside Hubei province will end in May 2020, and inside Hubei in early June.
           </div>
           </span>
