@@ -35,7 +35,7 @@
 
         <td>
           <span v-if="this.$store.state.qn.latest">
-            <router-link to="/latest" exact><img id="update-button" src="@/assets/exclamation-mark.png" width="30" height="30" @click="clearUpdate()"></router-link>
+            <router-link to="/latest" exact><img id="update-button" src="@/assets/exclamation-mark.png" width="25" height="25" @click="clearUpdate()"></router-link>
           </span>
           <!-- <div class="qn-list"> -->
             <p class="qn"><router-link to="/latest" exact>How does COVID-19 spread?</router-link></p> <p class="date">Asked on 10/3/2021</p>
@@ -167,7 +167,7 @@ input[type=checkbox] {
 
 #update-button {
   padding-right: 5px;
-  padding-top: 5px;
+  padding-top: 8px;
 }
 
 .hidden {display:none;}
