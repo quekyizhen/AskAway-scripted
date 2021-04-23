@@ -153,8 +153,8 @@ p{
 
 table {
     width:100%;
-    /* padding-left: 300px; */
     text-align:left;
+    border-collapse: collapse;
 }
 th, td {
   padding-left: 20px;
