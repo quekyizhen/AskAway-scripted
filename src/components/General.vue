@@ -16,13 +16,12 @@
 
     <table>
     
-     <tr>
-        <td><input type="checkbox"></td>
-        <td class="latest" width="30">
+      <tr>
+        <td class="check"><input type="checkbox"></td>
+        <td width="10">
         <td>
-          <!-- <div class="qn-list"> -->
             <p class="qn">Who is at higher risk for serious illness from covid?</p> <p class="date">Asked on 22/4/2021</p>
-          <!-- </div> -->
+
         <td width = "130"><centre>
 
           <bookmark style="display:inline"></bookmark>
@@ -32,9 +31,9 @@
     </tr>
 
     <tr>
-        <td><input type="checkbox"></td>
+        <td class="check"><input type="checkbox"></td>
 
-        <td class="latest" width="30">
+        <td width="10">
         <span v-if="this.$store.state.qn.latest">
             <router-link to="/latest" exact><img id="update-button" src="@/assets/exclamation-mark.png" width="25" height="25" @click="clearUpdate()"></router-link>
           </span>
@@ -50,13 +49,11 @@
     </tr>
 
     <tr>
-        <td><input type="checkbox"></td>
-        <td class="latest">
+        <td class="check"><input type="checkbox"></td>
+        <td>
         <td>
 
-          <!-- <div class="qn-list"> -->
             <p class="qn">Who is Taylor Swift?</p> <p class="date">Asked on 1/3/2021</p>
-          <!-- </div> -->
 
         <td width = "130"><centre>
 
@@ -92,7 +89,6 @@ export default {
   },
   components: {
     'changing':ChangingBookmark,
-
     'bookmarkRed':BookmarkRed,
     'bookmark': Bookmark
   }
@@ -106,6 +102,11 @@ button{
   background: none;
   cursor: pointer;
   padding-left: 25px
+}
+
+.check {
+  padding-left:20px;
+  padding-right:0px
 }
 
 p{
@@ -132,12 +133,13 @@ p{
 
 table {
     width:100%;
-    /* padding-left: 300px; */
     text-align:left;
     margin-bottom: 136px;
+    border-collapse: collapse;
 }
+
 th, td {
-  padding-left: 20px;
+  padding-right: 0px;
   text-align: left;
 }
 
@@ -148,16 +150,9 @@ tr:nth-child(odd) {
  background-color: #fff;
 }
 
-.latest {border-right:transparent}
-
 input[type=checkbox] {
     width: 15px;
     height: 15px;
-}
-
-.qn-list {
-  display: inline-block;
-  padding-left: 30px;
 }
 
 .qn {
