@@ -55,23 +55,24 @@
 
         <td>
           <div class="qn-list">
-            <p class="qn">Who is Taylor Swift?</p> <p class="date">Asked on 1/3/2021</p>
+            <p class="qn">When will covid reach its peak?</p> <p class="date">Asked on 28/2/2021</p>
           </div>
         <p></p>
         <span class="ans">
           <span class="ansTitle"> Answer: </span>
           <span class="ansText">
-              American country singer-songwriter
+              June
           </span> </span>
           
           <span class="ans">
           <div class="ansTitle"> Context:</div>
           <div class="ansText" style="display:inline">
-            Speak Now is the third studio album by <span class="highlightedText">American country singer-songwriter</span> Taylor Swift. 
-            It was released on October 25, 2010, by Big Machine Records. Production for the album took place during 
-            2009 to 2010 at several recording studios, and was handled by Swift and Nathan Chapman. Written entirely by 
-            Swift as the follow-up to Fearless, Speak Now expands on the country pop style of her previous work, and 
-            features lyrical themes including love, romance and heartbreak.
+            tart of person-to-person transmission in England and Wales in the absence of controls, 
+            assuming biological parameters remain unchanged. Therefore, if person-to-person transmission persists 
+            from February, we predict the epidemic peak would occur in <span class="highlightedText">June</span>. The starting location has minimal 
+            impact on peak timing, and model stochasticity varies peak timing by 10 days. Incorporating realistic 
+            parameter uncertainty leads to estimates of peak time ranging from 78 days to 241 days after 
+            person-to-person 
           </div>
           </span>
           <br>
@@ -79,18 +80,17 @@
           <span class="ans">
           <span class="ansTitle"> Answer: </span>
           <span class="ansText">
-              American singer-songwriter
+              between February 20 and 22, 2020
           </span> </span>
           
           <span class="ans">
           <div class="ansTitle"> Context:</div>
           <div class="ansText" style="display:inline">
-            Mine  is a song performed by <span class="highlightedText">American singer-songwriter Taylor Swift</span>. The song was written by
-             Taylor Swift alone and produced by Swift along with Nathan Chapman. It was released as the lead 
-             single from Swift's third studio album, Speak Now (2010) by Big Machine Records.Following an 
-             unauthorized internet leak, the song was released on August 4, 2010, two weeks earlier than the 
-             intended release date.Swift was inspired to write Mine after reflecting on one of her unnamed 
-             crushes and explained that 
+            ontrol measures implemented since January 23, which include cutting off Wuhan and many other cities 
+            and towns, a great public awareness and high level of self isolation at home, have contributed to a 
+            substantial decline in the reproductivity of the COVID-19 in China. We predict that Hubei province 
+            will reach its peak between <span class="highlightedText">February 20 and 22, 2020</span>, and if the removal rate can be increased to 0.1, 
+            the epidemic outside Hubei province will end in May 2020, and inside Hubei in early June.
           </div>
           </span>
         </td>

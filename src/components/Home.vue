@@ -129,10 +129,10 @@ input[type=text] {
   box-sizing: border-box;
 }
  a {
-  text-decoration: underline;   
+  color:#6495ED;
  }
 a:hover {
-  color: blue;
+  text-decoration: underline;   
 }
 #display-image {
   padding-left: 270px;
