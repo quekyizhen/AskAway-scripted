@@ -34,11 +34,6 @@ export default {
   components: {
     Footer
   },
-  data() {
-    return {
-      latest: true,
-    }
-  },
   methods: {
     toggleSignIn(username) {
       this.signedIn = true;
@@ -48,7 +43,7 @@ export default {
     toggleSignOut() {
       this.signedIn = false;
       // this.username = " to SafeTrack";
-    }
+    }, 
   },
 
 }

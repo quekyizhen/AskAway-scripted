@@ -35,8 +35,11 @@
         <td><input type="checkbox"></td>
 
         <td class="latest" width="30">
-            <router-link to="/latest"><img id="update-button" src="@/assets/exclamation-mark.png" width="30" height="30" @click="clearUpdate()"></router-link>
+        <span v-if="this.$store.state.qn.latest">
+            <router-link to="/latest" exact><img id="update-button" src="@/assets/exclamation-mark.png" width="25" height="25" @click="clearUpdate()"></router-link>
+          </span>
         </td><td>
+        
             <p class="qn"><router-link to="/latest" exact>How does COVID-19 spread?</router-link></p> <p class="date">Asked on 10/3/2021</p>
 
 
@@ -75,21 +78,24 @@ export default {
   name: 'general',
   data() {
     return {
-        isMarked: false
+        isMarked: false, 
     }
   },
   methods: {
     change() {
       this.isMarked = !this.isMarked;
       console.log("hello");
+    }, 
+    clearUpdate() {
+      this.$store.state.qn.latest = false;
     }
   },
   components: {
     'changing':ChangingBookmark,
+
     'bookmarkRed':BookmarkRed,
     'bookmark': Bookmark
   }
-
 }
 </script>
 
@@ -122,7 +128,6 @@ p{
   transition: 0.3s;
   font-size: 17px;
   font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
-
 }
 
 table {
@@ -168,7 +173,8 @@ input[type=checkbox] {
 }
 
 #update-button {
-  padding-right: 10px;
+  padding-right: 5px;
+  padding-top: 8px;
 }
 
 .hidden {display:none;}

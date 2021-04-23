@@ -5,7 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    red : false
+
+    red : false,
+    qn: {
+      latest: true,
+
+    }
   },
   getters: {
     getMarked(state) {
