@@ -8,15 +8,17 @@
   <input type="text" v-model="email" value="email" id="email"><br>
   <label for="password">Password:</label><br>
   <input type="password" v-model="password" value="password" id="password"><br>
-    <div id = "forgot"><router-link to="/forgot">Forgot Password?</router-link><br></div>
-    <button type="submit"><router-link to="/" style="color:white; text-decoration:none">Log In</router-link></button>
+    <div id = "forgot"><router-link to="/forgot">Forgot Password?</router-link></div>
+    <div id="button-area">
+      <button type="submit"><router-link to="/" style="color:white; text-decoration:none">Log In</router-link></button>
+    </div>
     <ul v-if="errors.length">
       <li v-for="error in errors" :key="error">
         {{error}}
       </li>
     </ul>
   </form>
-  <hr style="width:50%;text-align:left;margin-left:0"><h3>
+  <hr style="width:55%;text-align:left;margin-left:0"><h3>
   New to AskAway?</h3><a><router-link to="/register">Register Here</router-link></a>
 </div>
 </template>
@@ -81,6 +83,10 @@ button {
   margin:15px 15px;
   cursor: pointer;
   border-radius: 8px;
+}
+
+#button-area {
+  padding-left: 350px;
 }
 a {
   color:#2c3e50;
