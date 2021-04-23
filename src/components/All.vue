@@ -56,7 +56,7 @@
 
         <tr>
             <td>
-                <p class="date"> 30/03/2021</p>
+                <p class="date"> 10/03/2021</p>
             </td>
             <td>
                 <div class="qn-list">
@@ -65,22 +65,6 @@
                 </div>
                 </td>
 
-                <td style ="width: 30px">
-                  <bookmark class="mark" style="display:inline"></bookmark>
-                  </td>
-        </tr>
-
-        <tr>
-            <td>
-                <p class="date"> 30/03/2021</p>
-            </td>
-            <td>
-                <div class="qn-list">
-                <p class="qn">
-                Through small droplets from the nose or mouth
-                </p>
-                </div>
-                </td>
                 <td style ="width: 30px">
                   <bookmark class="mark" style="display:inline"></bookmark>
                   </td>
