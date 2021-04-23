@@ -18,13 +18,14 @@
     
      <tr>
         <td><input type="checkbox"></td>
+        <td class="latest" width="30">
         <td>
           <!-- <div class="qn-list"> -->
             <p class="qn">Who is at higher risk for serious illness from covid?</p> <p class="date">Asked on 22/4/2021</p>
           <!-- </div> -->
         <td width = "130"><centre>
 
-          <changing style="display:inline"></changing>
+          <bookmark style="display:inline"></bookmark>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
 
         </td>
@@ -33,23 +34,24 @@
     <tr>
         <td><input type="checkbox"></td>
 
-        <td>
-          <span v-if="this.$store.state.qn.latest">
+        <td class="latest" width="30">
+        <span v-if="this.$store.state.qn.latest">
             <router-link to="/latest" exact><img id="update-button" src="@/assets/exclamation-mark.png" width="25" height="25" @click="clearUpdate()"></router-link>
           </span>
-          <!-- <div class="qn-list"> -->
+        </td><td>
+        
             <p class="qn"><router-link to="/latest" exact>How does COVID-19 spread?</router-link></p> <p class="date">Asked on 10/3/2021</p>
-          <!-- </div> -->
+
 
         <td>
-         <keep-alive><changing @changeBookmark="change" style="display:inline" v-show="!this.isMarked"></changing></keep-alive>
-         <bookmarkRed style="display:inline" v-show="this.isMarked"></bookmarkRed><button>
-          <img src="@/assets/garbage.png" width ="30" height = "30"></button>
+         <changing style="display:inline" ></changing>
+          <button><img src="@/assets/garbage.png" width ="30" height = "30"></button>
         </td>
     </tr>
 
     <tr>
         <td><input type="checkbox"></td>
+        <td class="latest">
         <td>
 
           <!-- <div class="qn-list"> -->
@@ -69,6 +71,7 @@
 </template>
 <script>
 import ChangingBookmark from "./ChangingBookmark.vue"
+import Bookmark from "./BookmarkButton.vue"
 import BookmarkRed from "./BookmarkButtonRed.vue"
 export default {
   
@@ -89,8 +92,10 @@ export default {
   },
   components: {
     'changing':ChangingBookmark,
-    'bookmarkRed':BookmarkRed
-  }, 
+
+    'bookmarkRed':BookmarkRed,
+    'bookmark': Bookmark
+  }
 }
 </script>
 
@@ -129,7 +134,7 @@ table {
     width:100%;
     /* padding-left: 300px; */
     text-align:left;
-    margin-bottom: 239px;
+    margin-bottom: 136px;
 }
 th, td {
   padding-left: 20px;
@@ -142,6 +147,8 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
  background-color: #fff;
 }
+
+.latest {border-right:transparent}
 
 input[type=checkbox] {
     width: 15px;
