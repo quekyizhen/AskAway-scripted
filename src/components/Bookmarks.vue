@@ -97,6 +97,10 @@
         <td width = "130"><centre>
           <bookmarkRed style="display:inline"></bookmarkRed>
           <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
+          <div id="space"></div>
+          <centre>
+          <bookmarkRed style="display:inline"></bookmarkRed>
+          <button><img src="@/assets/garbage.png" width ="30" height = "30"></button></centre>
 
         </td>
     </tr>
@@ -286,5 +290,9 @@ input[type=checkbox] {
 
 .show {
   display: block;
+}
+
+#space {
+  padding-bottom: 200px;
 }
 </style>
