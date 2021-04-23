@@ -8,7 +8,7 @@
       trained on multiple Reading Comprehension datasets such as <a target="_blank" href="https://quac.ai/">QuAC</a>, 
       <a target="_blank" href="https://stanfordnlp.github.io/coqa/">CoQA</a>, <a target="_blank" href="http://nlp.cs.washington.edu/triviaqa/">TriviaQA</a> and 
       <a target="_blank" href="https://www.microsoft.com/en-us/research/project/newsqa-dataset/">NewsQA</a>.
-      <p>Simply input any question and the top 4 answers will be returned. </p>
+      <p>Simply input any question below and the top 4 answers will be returned. </p>
     </div>
 
     <br>

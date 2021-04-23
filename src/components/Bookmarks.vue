@@ -16,7 +16,7 @@
 
     <table>
     <tr>
-        <td><input type="checkbox"></td>
+        <td style="padding-right: 10px"><input type="checkbox"></td>
 
         <td>
 
@@ -50,6 +50,7 @@
 
         </td>
     </tr>
+
     <tr>
         <td><input type="checkbox"></td>
 
@@ -176,6 +177,7 @@ input[type=checkbox] {
 .qn-list {
   display: inline-block;
   padding-left: 30px;
+  padding-top: 10px;
 }
 
 .qn {

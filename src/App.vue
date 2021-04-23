@@ -21,30 +21,12 @@
     <div style="width:100%">
       <router-view @toggleSignIn="toggleSignIn" @toggleSignOut="toggleSignOut" :signedIn="signedIn"></router-view>
     </div>
-
-    <!-- <div id="copyright">&#169; Team A <sup>2</sup></div> -->
-    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import Footer from './components/Footer.vue'
 export default {
   name: 'App',
-  components: {
-    Footer
-  },
-  methods: {
-    toggleSignIn(username) {
-      this.signedIn = true;
-      this.username = ", " + username;
-      this.$router.push("/");
-    },
-    toggleSignOut() {
-      this.signedIn = false;
-      // this.username = " to SafeTrack";
-    }, 
-  },
 
 }
 </script>
