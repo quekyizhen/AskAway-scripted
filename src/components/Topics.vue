@@ -14,6 +14,8 @@
       <router-link to="/bookmarks" exact>Bookmarks</router-link>
     </div>
 
+    <h1>COVID-19 Questions</h1>
+
     <table>
     <tr>
         <td><input type="checkbox"></td>
@@ -94,6 +96,11 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  font-size: 30px;
+  padding-left:20px;
+  margin: 0;
+}
 
 button{
   border: none;

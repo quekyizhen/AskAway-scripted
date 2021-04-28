@@ -1,18 +1,20 @@
 <template>
 <div>
     <div class="navbar">
-      <a href="#news">Sort by</a>
+      <a href="#">Sort by</a>
       <div class="drop">
-      <button class="dropbtn">Add
-      </button>
-      <div class="drop-content" id="myDropdown">
-        <router-link to= "/topics" exact> COVID-19</router-link>
-        <a href="#"> Tourism</a>
-        <a href="#"> Economy</a>
-      </div>
+        <button class="dropbtn">Add
+        </button>
+        <div class="drop-content" id="myDropdown">
+          <router-link to= "/topics" exact> COVID-19</router-link>
+          <a href="#"> Tourism</a>
+          <a href="#"> Economy</a>
+        </div>
       </div> 
       <a>Bookmarks</a>
     </div>
+
+     <h1>General Questions</h1>
 
     <table>
     
@@ -97,6 +99,12 @@ export default {
 
 <style scoped>
 
+h1 {
+  font-size: 30px;
+  padding-left:20px;
+  margin: 0;
+
+}
 button{
   border: none;
   background: none;
@@ -175,9 +183,12 @@ input[type=checkbox] {
 .hidden {display:none;}
 
 .navbar {
-  overflow: hidden;
+  overflow:hidden;
   background-color: white;
   font-weight: bold;
+  width:965px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .navbar a {
@@ -187,8 +198,16 @@ input[type=checkbox] {
   text-align: center;
   padding: 10px 16px;
   text-decoration: none;  
-
 }
+/* 
+.navbar #text {
+  float: left;
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  padding-left:20px;
+  text-decoration: none;  
+} */
 
 .drop {
   float: right;
