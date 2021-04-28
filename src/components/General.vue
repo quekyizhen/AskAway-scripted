@@ -290,7 +290,7 @@ input[type=checkbox] {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 40%;
+  width: 30%;
   height:20%;
 }
 
@@ -312,7 +312,7 @@ input[type=checkbox] {
 #modal-text {
   text-align: center;
   font-size: 20px;
-  padding-top: 30px;
+  padding-top: 35px;
   font-weight: bold;
 }
 

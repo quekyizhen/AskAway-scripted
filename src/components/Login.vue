@@ -10,7 +10,7 @@
   <input type="password" v-model="password" value="password" id="password"><br>
     <div id = "forgot"><router-link to="/forgot">Forgot Password?</router-link></div>
     <div id="button-area">
-      <button type="submit"><router-link to="/" style="color:white; text-decoration:none">Log In</router-link></button>
+      <button type="submit" @onclick="loggedIn=True"><router-link to="/" style="color:white; text-decoration:none">Log In</router-link></button>
     </div>
     <ul v-if="errors.length">
       <li v-for="error in errors" :key="error">
@@ -24,7 +24,6 @@
 </template>
 
 <script>
-import firebase from 'firebase'
 export default {
   name: "Login",
   data() {
@@ -36,23 +35,6 @@ export default {
     }
   },
   methods: {
-    toggleSignIn(user) {
-      this.$emit('toggleSignIn', user)
-    },
-    login() {
-      this.errors=[]
-      firebase
-          .auth()
-          .signInWithEmailAndPassword(this.email, this.password)
-          .then(data => {
-            this.toggleSignIn(data.user.displayName)
-            this.$router.push('/')
-          })
-          .catch((error) => {
-            this.errors.push(error.message)
-          });
-
-    },
   }
 }
 </script>
