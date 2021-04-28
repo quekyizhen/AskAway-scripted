@@ -6,12 +6,23 @@
         <button class="dropbtn">Add
         </button>
         <div class="drop-content" id="myDropdown">
-          <router-link to= "/topics" exact> COVID-19</router-link>
+          <a @click="showModal()"> COVID-19</a>
           <a href="#"> Tourism</a>
           <a href="#"> Economy</a>
         </div>
       </div> 
       <a>Bookmarks</a>
+    </div>
+
+     <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modal-text">Added to <router-link to="/topics" exact>COVID-19</router-link> Folder!</p>
+      </div>
+
     </div>
 
      <h1>General Questions</h1>
@@ -87,6 +98,14 @@ export default {
     }, 
     clearUpdate() {
       this.$store.state.qn.latest = false;
+    }, 
+    showModal() {
+      var modal = document.getElementById("myModal");
+      modal.style.display = "block";
+      var span = document.getElementsByClassName("close")[0];
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
     }
   },
   components: {
@@ -199,15 +218,6 @@ input[type=checkbox] {
   padding: 10px 16px;
   text-decoration: none;  
 }
-/* 
-.navbar #text {
-  float: left;
-  font-size: 18px;
-  color: black;
-  text-align: center;
-  padding-left:20px;
-  text-decoration: none;  
-} */
 
 .drop {
   float: right;
@@ -257,5 +267,60 @@ input[type=checkbox] {
 
 .show {
   display: block;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  height:20%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modal-text {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 30px;
+  font-weight: bold;
+}
+
+#modal-text a {
+  color: blue;
+}
+
+#modal-text a:hover {
+  cursor: pointer;
 }
 </style>
