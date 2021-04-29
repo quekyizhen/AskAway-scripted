@@ -10,7 +10,7 @@
   <input type="password" v-model="password" value="password" id="password"><br>
     <div id = "forgot"><router-link to="/forgot">Forgot Password?</router-link></div>
     <div id="button-area">
-      <button @click="login()"><router-link to="/" style="color:white; text-decoration:none">Log In</router-link></button>
+      <button @click="login()"><router-link to="/home" exact style="color:white; text-decoration:none">Log In</router-link></button>
     </div>
     <ul v-if="errors.length">
       <li v-for="error in errors" :key="error">

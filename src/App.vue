@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="header">
-      <div v-if="this.$store.state.signedIn"><h1><router-link to="/" exact><img src="@/assets/logo_name.png" width="245" height="53" alt="logo words"></router-link></h1></div>
-      <div v-else><h1><router-link to="/login" exact><img src="@/assets/logo_name.png" width="245" height="53" alt="logo words"></router-link></h1></div>
+      <div v-if="this.$store.state.signedIn"><h1><router-link to="/home" exact><img src="@/assets/logo_name.png" width="245" height="53" alt="logo words"></router-link></h1></div>
+      <div v-else><h1><router-link to="/" exact><img src="@/assets/logo_name.png" width="245" height="53" alt="logo words"></router-link></h1></div>
       <!-- <div><div class="link"><router-link to="/login" exact>Login</router-link></div></div> -->
   
       <div v-if="this.$store.state.signedIn" class="dropdown">
