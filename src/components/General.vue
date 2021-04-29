@@ -1,18 +1,31 @@
 <template>
 <div>
     <div class="navbar">
-      <a href="#news">Sort by</a>
+      <a href="#">Sort by</a>
       <div class="drop">
-      <button class="dropbtn">Add
-      </button>
-      <div class="drop-content" id="myDropdown">
-        <router-link to= "/topics" exact> COVID-19</router-link>
-        <a href="#"> Tourism</a>
-        <a href="#"> Economy</a>
-      </div>
+        <button class="dropbtn">Add
+        </button>
+        <div class="drop-content" id="myDropdown">
+          <a @click="showModal()"> COVID-19</a>
+          <a href="#"> Tourism</a>
+          <a href="#"> Economy</a>
+        </div>
       </div> 
       <a>Bookmarks</a>
     </div>
+
+     <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modal-text">Added to <router-link to="/topics" exact>COVID-19</router-link> Folder!</p>
+      </div>
+
+    </div>
+
+     <h1>General Questions</h1>
 
     <table>
     
@@ -85,6 +98,14 @@ export default {
     }, 
     clearUpdate() {
       this.$store.state.qn.latest = false;
+    }, 
+    showModal() {
+      var modal = document.getElementById("myModal");
+      modal.style.display = "block";
+      var span = document.getElementsByClassName("close")[0];
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
     }
   },
   components: {
@@ -97,6 +118,12 @@ export default {
 
 <style scoped>
 
+h1 {
+  font-size: 30px;
+  padding-left:20px;
+  margin: 0;
+
+}
 button{
   border: none;
   background: none;
@@ -175,9 +202,12 @@ input[type=checkbox] {
 .hidden {display:none;}
 
 .navbar {
-  overflow: hidden;
+  overflow:hidden;
   background-color: white;
   font-weight: bold;
+  width:965px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .navbar a {
@@ -187,7 +217,6 @@ input[type=checkbox] {
   text-align: center;
   padding: 10px 16px;
   text-decoration: none;  
-
 }
 
 .drop {
@@ -238,5 +267,60 @@ input[type=checkbox] {
 
 .show {
   display: block;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  height:20%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modal-text {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 35px;
+  font-weight: bold;
+}
+
+#modal-text a {
+  color: blue;
+}
+
+#modal-text a:hover {
+  cursor: pointer;
 }
 </style>

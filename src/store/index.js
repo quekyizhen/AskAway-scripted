@@ -6,6 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
 
+    signedIn: false,
+
     red : false,
     qn: {
       latest: true,
