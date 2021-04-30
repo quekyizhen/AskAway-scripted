@@ -15,10 +15,11 @@
 
     <div id="qn-box">
       <label for="qn">Ask a Question:</label><br>
-      <input type="text" id="qn" name="qn" placeholder="Type question here..."><br>
+      <input type="text" id="qn" name="qn" placeholder="Type question here..." v-model="inputText"><br>
 
       <div class="button-area">
         <button class="button" @click="showAns()">Go!</button>
+        <button class="button" @click="retrieveAns()">Real System</button>
       </div>
     </div>
 
@@ -93,8 +94,15 @@
 </template>
 
 <script>
+import Axios from 'axios';
 
 export default {
+  data() {
+    return {
+      inputText : "",
+      answers: []
+    }
+  },
   methods: {
     showAns() {
       var x = document.getElementById("ans-box");
@@ -106,6 +114,11 @@ export default {
     },
     dropdownList() {
       document.getElementById("dropdown").classList.toggle("show");
+    },
+    retrieveAns() {
+      const question = {'question': this.inputText};
+      Axios.post("http://127.0.0.1:8000/predict", question).then(response => this.answers = response.content['answer'])
+
     }
   }
 }
