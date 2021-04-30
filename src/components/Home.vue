@@ -22,7 +22,9 @@
         <button class="button" @click="retrieveAns()">Real System</button>
       </div>
     </div>
-
+    <div id="real-ans">
+      Answers : {{answers}}
+    </div>
     <div id="ans-box">
       <strong><p> Top 4 Answers </p></strong>
         <div class="ans">
@@ -117,7 +119,13 @@ export default {
     },
     retrieveAns() {
       const question = {'question': this.inputText};
-      Axios.post("http://127.0.0.1:8000/predict", question).then(response => this.answers = response.content['answer'])
+      Axios.post("http://127.0.0.1:8000/predict", question).then(response => this.answers = response.content['answer']);
+      var x = document.getElementById("ans-box");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
 
     }
   }
