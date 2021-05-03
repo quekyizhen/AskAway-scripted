@@ -26,10 +26,11 @@
       <strong><p> Top 4 Answers </p></strong>
       <div v-for="dict in this.answers" v-bind:key="dict">
         <div class="ans">
-        Answer: {{dict.answer}} 
+        Answer: {{dict.answers}} 
         <br><br>
-        Context: {{dict.context}}
-        <br><br>
+        
+        Context: <span v-html="highlight(dict.context, dict.answers)"></span>
+
         </div><div class="space"></div>
       </div>
     </div>
@@ -38,11 +39,11 @@
         <div class="ans">
         Answer 1: older adults and people with underlying medical conditions
         <br><br>
-        Context 1: COVID-19 is a new disease and there is limited information regarding risk factors 
-        for severe disease. Based on currently available information and clinical expertise, 
-        <span class="highlightedText">older adults and people with underlying medical conditions</span> 
-        are at higher risk for severe illness from COVID-19.
-        <br><br></div>
+        Context 1: COVID-19 is a new disease and there is limited information regarding risk factors for
+         severe disease. Based on currently available information and clinical expertise, <span class="highlightedText">older adults and people
+        with underlying medical conditions</span> are at higher risk for severe illness from COVID-19.
+        <br><br>
+        </div>
         <div class="space"></div>
         
         <div class="ans">
@@ -131,21 +132,18 @@ export default {
       console.log(this.answers);
       });
 
-      // axios.post("http://127.0.0.1:8000/predict", question, {
-      // headers: {
-      //     // remove headers
-      //   }
-      // }).then(res => {
-      //   console.log(res);
-      // }).catch(err => {
-      //   console.log(err.response);
-      // });
       var x = document.getElementById("real-ans");
       if (x.style.display === "none") {
         x.style.display = "block";
         } else {
           x.style.display = "none";
         }
+    },
+    highlight(cont, ans) {
+      //=> is a function with match as an argument, where match is RegExp(ans)  
+      return cont.replace(new RegExp(ans), match => {
+            return '<mark style="background-color: #ffffd5; font-weight:bold">' + match + '</mark>';
+        });
     }
   }
 }
@@ -203,9 +201,10 @@ a:hover {
 }
 
 .highlightedText {
-  background-color:#ffffd5;
+  background:#ffffd5;
   font-weight:bold;
 }
+
 
 .ans {
   font-size: 14px;
