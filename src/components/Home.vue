@@ -96,7 +96,7 @@
 </template>
 
 <script>
-import Axios from 'axios';
+import axios from 'axios';
 
 export default {
   data() {
@@ -117,16 +117,18 @@ export default {
     dropdownList() {
       document.getElementById("dropdown").classList.toggle("show");
     },
-    retrieveAns() {
+    fetchAns() {
       const question = {'question': this.inputText};
-      Axios.post("http://127.0.0.1:8000/predict", question).then(response => this.answers = response.content['answer']);
       var x = document.getElementById("ans-box");
-      if (x.style.display === "none") {
+      axios.post("http://127.0.0.1:8000/predict", question).then(async response => {this.answers = await response.data; 
+         if (response.ok) {
+        if (x.style.display === "none") {
         x.style.display = "block";
-      } else {
-        x.style.display = "none";
+        } else {
+          x.style.display = "none";
+        }
       }
-
+      });
     }
   }
 }
