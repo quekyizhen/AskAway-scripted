@@ -15,13 +15,43 @@
 
     <div id="qn-box">
       <label for="qn">Ask a Question:</label><br>
-      <input type="text" id="qn" name="qn" placeholder="Type question here..."><br>
+      <input type="text" id="qn" name="qn" placeholder="Type question here..." v-model="inputText"><br>
 
       <div class="button-area">
         <button class="button" @click="showAns()">Go!</button>
+        <button class="button" @click="retrieveAns()">Real System</button>
       </div>
     </div>
+    <div id="real-ans">
+      Answer: {{this.answers}}
+      <!-- <div class="ans">
+      Answer 1: {{this.answers[0]['answer']}}
+      <br><br>
+      Context 1: {{this.answers[0]['context']}}
+      <br><br>
+      </div>
 
+      <div class="ans">
+      Answer 2: {{this.answers[1]['answer']}}
+      <br><br>
+      Context 2: {{this.answers[1]['context']}}
+      <br><br>
+      </div>
+
+      <div class="ans">
+      Answer 3: {{this.answers[2]['answer']}}
+      <br><br>
+      Context 3: {{this.answers[2]['context']}}
+      <br><br>
+      </div>
+
+      <div class="ans">
+      Answer 4: {{this.answers[3]['answer']}}
+      <br><br>
+      Context 4: {{this.answers[3]['context']}}
+      <br><br>
+      </div> -->
+    </div>
     <div id="ans-box">
       <strong><p> Top 4 Answers </p></strong>
         <div class="ans">
@@ -93,8 +123,15 @@
 </template>
 
 <script>
+import axios from 'axios';
 
 export default {
+  data() {
+    return {
+      inputText : "",
+      answers: []
+    }
+  },
   methods: {
     showAns() {
       var x = document.getElementById("ans-box");
@@ -106,6 +143,28 @@ export default {
     },
     dropdownList() {
       document.getElementById("dropdown").classList.toggle("show");
+    },
+    retrieveAns() {
+      const question = {'question': this.inputText};
+      axios.post("http://127.0.0.1:8000/predict", question).then(response => {this.answers = response.data.answer; 
+      console.log(this.answers);
+      });
+
+      // axios.post("http://127.0.0.1:8000/predict", question, {
+      // headers: {
+      //     // remove headers
+      //   }
+      // }).then(res => {
+      //   console.log(res);
+      // }).catch(err => {
+      //   console.log(err.response);
+      // });
+      var x = document.getElementById("real-ans");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
     }
   }
 }
@@ -151,6 +210,12 @@ a:hover {
   padding-right: 300px;
 }
 #ans-box {
+  display: none;
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+#real-ans {
   display: none;
   padding-left: 300px;
   padding-right: 300px;
