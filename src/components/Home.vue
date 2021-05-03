@@ -23,7 +23,7 @@
       </div>
     </div>
     <div id="real-ans">
-      Answers : {{answers}}
+      Answers : {{this.answers}}
     </div>
     <div id="ans-box">
       <strong><p> Top 4 Answers </p></strong>
@@ -117,18 +117,27 @@ export default {
     dropdownList() {
       document.getElementById("dropdown").classList.toggle("show");
     },
-    fetchAns() {
+    retrieveAns() {
       const question = {'question': this.inputText};
-      var x = document.getElementById("ans-box");
-      axios.post("http://127.0.0.1:8000/predict", question).then(async response => {this.answers = await response.data; 
-         if (response.ok) {
-        if (x.style.display === "none") {
+      axios.post("http://127.0.0.1:8000/predict", question).then(response => {this.answers = response.data.answer; 
+      console.log(this.answers);
+      });
+
+      // axios.post("http://127.0.0.1:8000/predict", question, {
+      // headers: {
+      //     // remove headers
+      //   }
+      // }).then(res => {
+      //   console.log(res);
+      // }).catch(err => {
+      //   console.log(err.response);
+      // });
+      var x = document.getElementById("real-ans");
+      if (x.style.display === "none") {
         x.style.display = "block";
         } else {
           x.style.display = "none";
         }
-      }
-      });
     }
   }
 }
@@ -174,6 +183,12 @@ a:hover {
   padding-right: 300px;
 }
 #ans-box {
+  display: none;
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+#real-ans {
   display: none;
   padding-left: 300px;
   padding-right: 300px;
