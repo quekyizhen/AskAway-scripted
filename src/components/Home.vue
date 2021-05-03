@@ -24,12 +24,12 @@
     </div>
     <div id="real-ans">
       <strong><p> Top 4 Answers </p></strong>
-      <div v-for="dict in this.answers" v-bind:key="dict">
+      <div v-for="(dict, index) in this.answers" v-bind:key="dict">
         <div class="ans">
-        Answer: {{dict.answers}} 
+        <strong>Answer {{index +1 }}  : </strong> {{dict.answers}} 
         <br><br>
         
-        Context: <span v-html="highlight(dict.context, dict.answers)"></span>
+        <strong>Context {{index + 1}} : </strong> <span v-html="highlight(dict.context, dict.answers)"></span>
 
         </div><div class="space"></div>
       </div>
