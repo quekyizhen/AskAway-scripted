@@ -23,34 +23,15 @@
       </div>
     </div>
     <div id="real-ans">
-      Answer: {{this.answers}}
-      <!-- <div class="ans">
-      Answer 1: {{this.answers[0]['answer']}}
-      <br><br>
-      Context 1: {{this.answers[0]['context']}}
-      <br><br>
+      <strong><p> Top 4 Answers </p></strong>
+      <div v-for="dict in this.answers" v-bind:key="dict">
+        <div class="ans">
+        Answer: {{dict.answer}} 
+        <br><br>
+        Context: {{dict.context}}
+        <br><br>
+        </div><div class="space"></div>
       </div>
-
-      <div class="ans">
-      Answer 2: {{this.answers[1]['answer']}}
-      <br><br>
-      Context 2: {{this.answers[1]['context']}}
-      <br><br>
-      </div>
-
-      <div class="ans">
-      Answer 3: {{this.answers[2]['answer']}}
-      <br><br>
-      Context 3: {{this.answers[2]['context']}}
-      <br><br>
-      </div>
-
-      <div class="ans">
-      Answer 4: {{this.answers[3]['answer']}}
-      <br><br>
-      Context 4: {{this.answers[3]['context']}}
-      <br><br>
-      </div> -->
     </div>
     <div id="ans-box">
       <strong><p> Top 4 Answers </p></strong>
