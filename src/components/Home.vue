@@ -26,10 +26,10 @@
       <strong><p> Top 4 Answers </p></strong>
       <div v-for="(dict, index) in this.answers" v-bind:key="dict">
         <div class="ans">
-        <strong>Answer {{index +1 }}  : </strong> {{dict.answers}} 
+        <strong>Answer {{index +1 }}  : </strong> {{dict.answer}} 
         <br><br>
         
-        <strong>Context {{index + 1}} : </strong> <span v-html="highlight(dict.context, dict.answers)"></span>
+        <strong>Context {{index + 1}} : </strong> <span v-html="highlight(dict.context, dict.answer)"></span>
 
         </div><div class="space"></div>
       </div>
