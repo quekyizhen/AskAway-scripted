@@ -11,7 +11,6 @@
           <a href="#"> Economy</a>
         </div>
       </div> 
-      <a>Bookmarks</a>
     </div>
 
      <!-- The Modal -->
