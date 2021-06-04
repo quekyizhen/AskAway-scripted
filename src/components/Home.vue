@@ -1,7 +1,7 @@
 <template>
   <body>
     <h1>Welcome to AskAway!</h1>
-    <img id="display-image" src="@/assets/qa_system_image.jpeg" width="700" height="350" alt="QA Image">
+    <!-- <img id="display-image" src="@/assets/qa_system_image.jpeg" width="700" height="350" alt="QA Image"> -->
     
     <div id="intro"> 
       Our Question Answering system aims to answer diverse questions with precise answers as it has been
