@@ -220,7 +220,7 @@ a:hover {
 
 }
 .button-area {
-  padding-top: 20px;
+  padding-top: 5px;
   text-align: right;
 }
 .button {
