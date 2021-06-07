@@ -117,11 +117,12 @@ export default {
   methods: {
     showAns() {
       var x = document.getElementById("ans-box");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
+      x.style.display = "block";
+      // if (x.style.display === "none") {
+      //   x.style.display = "block";
+      // } else {
+      //   x.style.display = "none";
+      // }
     },
     dropdownList() {
       document.getElementById("dropdown").classList.toggle("show");
