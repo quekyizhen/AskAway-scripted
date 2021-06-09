@@ -9,6 +9,7 @@
           <a @click="showModal()"> COVID-19</a>
           <a href="#"> Tourism</a>
           <a href="#"> Economy</a>
+          <a href="#"> New Folder</a>
         </div>
       </div> 
     </div>
