@@ -15,7 +15,7 @@
 
     <div id="qn-box">
       <label for="qn">Ask a Question:</label><br>
-      <input type="text" id="qn" name="qn" placeholder="Type question here..." v-model="inputText"><br>
+      <input type="text" id="qn" name="qn" placeholder="Type question here..." v-model="inputText" autocomplete="off"><br>
 
       <div class="button-area">
         <button class="button" @click="showAns()">Go!</button>
